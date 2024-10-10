@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    { "bigquery": {
+      "description": "Export DV360 Mapping CSV File.",
+      "auth": "user",
+      "from": {
+        "query": "SELECT * FROM `mapper_dv360.Solution_Advertiser_Mapping`"
+      },
+      "to": { 
+        "file": "mapping.csv"
+      }
+    }}
+  ]
+}

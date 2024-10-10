@@ -1,0 +1,163 @@
+{
+  "tasks": [
+    {
+      "dataset": {
+        "description": "Create the mapper_dv360 dataset.",
+        "auth": "user",
+        "dataset": "mapper_dv360"
+      }
+    },
+    {
+      "bigquery": {
+        "description": "Create the Attributes_Partners view.",
+        "auth": "user",
+        "from": {
+          "query": "SELECT
+  * EXCEPT(Value) REPLACE(CONCAT('Partner: ', REPLACE(attribute, '_', ' ')) AS Attribute),
+  CASE
+    WHEN Attribute IN (
+      'Data_Access_Config_Sdf_Version',
+      'Data_Access_Config_Sdf_Admin_Email'
+      'Exchange_Config_Enabled_Exchanges_Google_Ad_Manager_Agency'
+    ) THEN SAFE_DIVIDE(Value - MIN(Value) OVER(), MAX(Value) OVER() - MIN(Value) OVER())
+    ELSE SAFE_DIVIDE(Value, MAX(Value) OVER())
+  END AS Score
+ FROM (
+SELECT
+  partnerId,
+  CONCAT(displayName, ' - ', partnerId) AS Partner,
+  CAST(NULL AS STRING) AS advertiserId,
+  CAST(NULL AS STRING) AS Advertiser,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_7,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_30,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_90,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_180,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_365,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_UNSPECIFIED') AS Entity_Status_Unspecified,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_ACTIVE') AS Entity_Status_Active,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_DRAFT') AS Entity_Status_Draft,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_PAUSED') AS Entity_Status_Paused,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION') AS Entity_Status_Scheduled_For_Deletion,
+  COUNT(DISTINCT generalConfig.timeZone) AS General_Config_Time_Zone,
+  COUNT(DISTINCT generalConfig.currencyCode) AS General_Config_Currency_Code,
+  COUNTIF(adServerConfig.measurementConfig.dv360ToCmCostReportingEnabled) AS Ad_Server_Config_Measurement_Dv360_To_Cm_Cost_Reporting_Enabled,
+  COUNTIF(adServerConfig.measurementConfig.dv360ToCmDataSharingEnabled) AS Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled,
+  MAX(CASE dataAccessConfig.sdfConfig.version
+    WHEN 'SDF_VERSION_3_1' THEN 31
+    WHEN 'SDF_VERSION_4' THEN 40
+    WHEN 'SDF_VERSION_4_1' THEN 41
+    WHEN 'SDF_VERSION_4_2' THEN 42
+    WHEN 'SDF_VERSION_5' THEN 50
+    WHEN 'SDF_VERSION_5_1' THEN 51
+    WHEN 'SDF_VERSION_5_2' THEN 52
+    WHEN 'SDF_VERSION_5_3' THEN 53
+    WHEN 'SDF_VERSION_5_4' THEN 54
+    WHEN 'SDF_VERSION_5_5' THEN 55
+    WHEN 'SDF_VERSION_6' THEN 60
+    WHEN 'SDF_VERSION_7' THEN 70
+    WHEN 'SDF_VERSION_7_1' THEN 71
+  END) AS Data_Access_Config_Sdf_Version,
+  COUNT(DISTINCT dataAccessConfig.sdfConfig.adminEmail) AS Data_Access_Config_Sdf_Admin_Email,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_UNSPECIFIED')) AS Exchange_Config_Enabled_Exchanges_Unspecified,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_GOOGLE_AD_MANAGER')) AS Exchange_Config_Enabled_Exchanges_Google_Ad_Manager,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_APPNEXUS')) AS Exchange_Config_Enabled_Exchanges_Appnexus,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_BRIGHTROLL')) AS Exchange_Config_Enabled_Exchanges_Brightroll,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ADFORM')) AS Exchange_Config_Enabled_Exchanges_Adform,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ADMETA')) AS Exchange_Config_Enabled_Exchanges_Admeta,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ADMIXER')) AS Exchange_Config_Enabled_Exchanges_Admixer,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ADSMOGO')) AS Exchange_Config_Enabled_Exchanges_Adsmogo,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ADSWIZZ')) AS Exchange_Config_Enabled_Exchanges_Adswizz,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_BIDSWITCH')) AS Exchange_Config_Enabled_Exchanges_Bidswitch,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_BRIGHTROLL_DISPLAY')) AS Exchange_Config_Enabled_Exchanges_Brightroll_Display,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_CADREON')) AS Exchange_Config_Enabled_Exchanges_Cadreon,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_DAILYMOTION')) AS Exchange_Config_Enabled_Exchanges_Dailymotion,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_FIVE')) AS Exchange_Config_Enabled_Exchanges_Five,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_FLUCT')) AS Exchange_Config_Enabled_Exchanges_Fluct,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_FREEWHEEL')) AS Exchange_Config_Enabled_Exchanges_Freewheel,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_GENIEE')) AS Exchange_Config_Enabled_Exchanges_Geniee,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_GUMGUM')) AS Exchange_Config_Enabled_Exchanges_Gumgum,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_IMOBILE')) AS Exchange_Config_Enabled_Exchanges_Imobile,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_IBILLBOARD')) AS Exchange_Config_Enabled_Exchanges_Ibillboard,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_IMPROVE_DIGITAL')) AS Exchange_Config_Enabled_Exchanges_Improve_Digital,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_INDEX')) AS Exchange_Config_Enabled_Exchanges_Index,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_KARGO')) AS Exchange_Config_Enabled_Exchanges_Kargo,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_MICROAD')) AS Exchange_Config_Enabled_Exchanges_Microad,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_MOPUB')) AS Exchange_Config_Enabled_Exchanges_Mopub,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_NEND')) AS Exchange_Config_Enabled_Exchanges_Nend,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ONE_BY_AOL_DISPLAY')) AS Exchange_Config_Enabled_Exchanges_One_By_Aol_Display,
+  SUM((SELECT COUNT(exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ONE_BY_AOL_MOBILE')) AS Exchange_Config_Enabled_Exchanges_One_By_Aol_Mobile,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ONE_BY_AOL_VIDEO')) AS Exchange_Config_Enabled_Exchanges_One_By_Aol_Video,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_OOYALA')) AS Exchange_Config_Enabled_Exchanges_Ooyala,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_OPENX')) AS Exchange_Config_Enabled_Exchanges_Openx,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_PERMODO')) AS Exchange_Config_Enabled_Exchanges_Permodo,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_PLATFORMONE')) AS Exchange_Config_Enabled_Exchanges_Platformone,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_PLATFORMID')) AS Exchange_Config_Enabled_Exchanges_Platformid,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_PUBMATIC')) AS Exchange_Config_Enabled_Exchanges_Pubmatic,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_PULSEPOINT')) AS Exchange_Config_Enabled_Exchanges_Pulsepoint,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_REVENUEMAX')) AS Exchange_Config_Enabled_Exchanges_Revenuemax,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_RUBICON')) AS Exchange_Config_Enabled_Exchanges_Rubicon,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SMARTCLIP')) AS Exchange_Config_Enabled_Exchanges_Smartclip,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SMARTRTB')) AS Exchange_Config_Enabled_Exchanges_Smartrtb,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SMARTSTREAMTV')) AS Exchange_Config_Enabled_Exchanges_Smartstreamtv,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SOVRN')) AS Exchange_Config_Enabled_Exchanges_Sovrn,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SPOTXCHANGE')) AS Exchange_Config_Enabled_Exchanges_Spotxchange,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_STROER')) AS Exchange_Config_Enabled_Exchanges_Stroer,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TEADSTV')) AS Exchange_Config_Enabled_Exchanges_Teadstv,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TELARIA')) AS Exchange_Config_Enabled_Exchanges_Telaria,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TVN')) AS Exchange_Config_Enabled_Exchanges_Tvn,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_UNITED')) AS Exchange_Config_Enabled_Exchanges_United,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_YIELDLAB')) AS Exchange_Config_Enabled_Exchanges_Yieldlab,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_YIELDMO')) AS Exchange_Config_Enabled_Exchanges_Yieldmo,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_UNRULYX')) AS Exchange_Config_Enabled_Exchanges_Unrulyx,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_OPEN8')) AS Exchange_Config_Enabled_Exchanges_Open8,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TRITON')) AS Exchange_Config_Enabled_Exchanges_Triton,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TRIPLELIFT')) AS Exchange_Config_Enabled_Exchanges_Triplelift,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TABOOLA')) AS Exchange_Config_Enabled_Exchanges_Taboola,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_INMOBI')) AS Exchange_Config_Enabled_Exchanges_Inmobi,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SMAATO')) AS Exchange_Config_Enabled_Exchanges_Smaato,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_AJA')) AS Exchange_Config_Enabled_Exchanges_Aja,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SUPERSHIP')) AS Exchange_Config_Enabled_Exchanges_Supership,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_NEXSTAR_DIGITAL')) AS Exchange_Config_Enabled_Exchanges_Nexstar_Digital,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_WAZE')) AS Exchange_Config_Enabled_Exchanges_Waze,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SOUNDCAST')) AS Exchange_Config_Enabled_Exchanges_Soundcast,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_SHARETHROUGH')) AS Exchange_Config_Enabled_Exchanges_Sharethrough,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_FYBER')) AS Exchange_Config_Enabled_Exchanges_Fyber,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_RED_FOR_PUBLISHERS')) AS Exchange_Config_Enabled_Exchanges_Red_For_Publishers,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_MEDIANET')) AS Exchange_Config_Enabled_Exchanges_Medianet,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TAPJOY')) AS Exchange_Config_Enabled_Exchanges_Tapjoy,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_VISTAR')) AS Exchange_Config_Enabled_Exchanges_Vistar,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_DAX')) AS Exchange_Config_Enabled_Exchanges_Dax,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_JCD')) AS Exchange_Config_Enabled_Exchanges_Jcd,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_PLACE_EXCHANGE')) AS Exchange_Config_Enabled_Exchanges_Place,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_APPLOVIN')) AS Exchange_Config_Enabled_Exchanges_Applovin,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_CONNATIX')) AS Exchange_Config_Enabled_Exchanges_Connatix,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_RESET_DIGITAL')) AS Exchange_Config_Enabled_Exchanges_Reset_Digital,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_HIVESTACK')) AS Exchange_Config_Enabled_Exchanges_Hivestack,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_DRAX')) AS Exchange_Config_Enabled_Exchanges_Drax,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_APPLOVIN_GBID')) AS Exchange_Config_Enabled_Exchanges_Applovin_Gbid,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_FYBER_GBID')) AS Exchange_Config_Enabled_Exchanges_Fyber_Gbid,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_UNITY_GBID')) AS Exchange_Config_Enabled_Exchanges_Unity_Gbid,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_CHARTBOOST_GBID')) AS Exchange_Config_Enabled_Exchanges_Chartboost_Gbid,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_ADMOST_GBID')) AS Exchange_Config_Enabled_Exchanges_Admost_Gbid,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_TOPON_GBID')) AS Exchange_Config_Enabled_Exchanges_Topon_Gbid,
+  SUM((SELECT COUNT(DISTINCT exchange) FROM UNNEST(exchangeConfig.enabledExchanges) WHERE exchange = 'EXCHANGE_NETFLIX')) AS Exchange_Config_Enabled_Exchanges_Netflix,
+
+  SUM((SELECT COUNT(DISTINCT googleAdManagerAgencyId) FROM UNNEST(exchangeConfig.enabledExchanges))) AS Exchange_Config_Enabled_Exchanges_Google_Ad_Manager_Agency,
+  SUM((SELECT COUNT(DISTINCT googleAdManagerBuyerNetworkId) FROM UNNEST(exchangeConfig.enabledExchanges))) AS Exchange_Config_Enabled_Exchanges_Google_Ad_Manager_Buyer_Network,
+  SUM((SELECT COUNT(DISTINCT googleAdManagerBuyerNetworkId) FROM UNNEST(exchangeConfig.enabledExchanges))) AS Exchange_Config_Enabled_Exchanges_Seat,
+
+  COUNT(DISTINCT billingConfig.billingProfileId) AS Billing_Config_Profile
+  FROM `mapper_dv360.DV360_Partners`
+  WHERE entityStatus != 'ENTITY_STATUS_ARCHIVED'
+  GROUP BY 1,2,3,4
+)
+UNPIVOT(Value FOR Attribute IN (Update_Time_7, Update_Time_30, Update_Time_90, Update_Time_180, Update_Time_365, Entity_Status_Unspecified, Entity_Status_Active, Entity_Status_Draft, Entity_Status_Paused, Entity_Status_Scheduled_For_Deletion, General_Config_Time_Zone, General_Config_Currency_Code, Ad_Server_Config_Measurement_Dv360_To_Cm_Cost_Reporting_Enabled, Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled, Data_Access_Config_Sdf_Version, Data_Access_Config_Sdf_Admin_Email, Exchange_Config_Enabled_Exchanges_Unspecified, Exchange_Config_Enabled_Exchanges_Google_Ad_Manager, Exchange_Config_Enabled_Exchanges_Appnexus, Exchange_Config_Enabled_Exchanges_Brightroll, Exchange_Config_Enabled_Exchanges_Adform, Exchange_Config_Enabled_Exchanges_Admeta, Exchange_Config_Enabled_Exchanges_Admixer, Exchange_Config_Enabled_Exchanges_Adsmogo, Exchange_Config_Enabled_Exchanges_Adswizz, Exchange_Config_Enabled_Exchanges_Bidswitch, Exchange_Config_Enabled_Exchanges_Brightroll_Display, Exchange_Config_Enabled_Exchanges_Cadreon, Exchange_Config_Enabled_Exchanges_Dailymotion, Exchange_Config_Enabled_Exchanges_Five, Exchange_Config_Enabled_Exchanges_Fluct, Exchange_Config_Enabled_Exchanges_Freewheel, Exchange_Config_Enabled_Exchanges_Geniee, Exchange_Config_Enabled_Exchanges_Gumgum, Exchange_Config_Enabled_Exchanges_Imobile, Exchange_Config_Enabled_Exchanges_Ibillboard, Exchange_Config_Enabled_Exchanges_Improve_Digital, Exchange_Config_Enabled_Exchanges_Index, Exchange_Config_Enabled_Exchanges_Kargo, Exchange_Config_Enabled_Exchanges_Microad, Exchange_Config_Enabled_Exchanges_Mopub, Exchange_Config_Enabled_Exchanges_Nend, Exchange_Config_Enabled_Exchanges_One_By_Aol_Display, Exchange_Config_Enabled_Exchanges_One_By_Aol_Mobile, Exchange_Config_Enabled_Exchanges_One_By_Aol_Video, Exchange_Config_Enabled_Exchanges_Ooyala, Exchange_Config_Enabled_Exchanges_Openx, Exchange_Config_Enabled_Exchanges_Permodo, Exchange_Config_Enabled_Exchanges_Platformone, Exchange_Config_Enabled_Exchanges_Platformid, Exchange_Config_Enabled_Exchanges_Pubmatic, Exchange_Config_Enabled_Exchanges_Pulsepoint, Exchange_Config_Enabled_Exchanges_Revenuemax, Exchange_Config_Enabled_Exchanges_Rubicon, Exchange_Config_Enabled_Exchanges_Smartclip, Exchange_Config_Enabled_Exchanges_Smartrtb, Exchange_Config_Enabled_Exchanges_Smartstreamtv, Exchange_Config_Enabled_Exchanges_Sovrn, Exchange_Config_Enabled_Exchanges_Spotxchange, Exchange_Config_Enabled_Exchanges_Stroer, Exchange_Config_Enabled_Exchanges_Teadstv, Exchange_Config_Enabled_Exchanges_Telaria, Exchange_Config_Enabled_Exchanges_Tvn, Exchange_Config_Enabled_Exchanges_United, Exchange_Config_Enabled_Exchanges_Yieldlab, Exchange_Config_Enabled_Exchanges_Yieldmo, Exchange_Config_Enabled_Exchanges_Unrulyx, Exchange_Config_Enabled_Exchanges_Open8, Exchange_Config_Enabled_Exchanges_Triton, Exchange_Config_Enabled_Exchanges_Triplelift, Exchange_Config_Enabled_Exchanges_Taboola, Exchange_Config_Enabled_Exchanges_Inmobi, Exchange_Config_Enabled_Exchanges_Smaato, Exchange_Config_Enabled_Exchanges_Aja, Exchange_Config_Enabled_Exchanges_Supership, Exchange_Config_Enabled_Exchanges_Nexstar_Digital, Exchange_Config_Enabled_Exchanges_Waze, Exchange_Config_Enabled_Exchanges_Soundcast, Exchange_Config_Enabled_Exchanges_Sharethrough, Exchange_Config_Enabled_Exchanges_Fyber, Exchange_Config_Enabled_Exchanges_Red_For_Publishers, Exchange_Config_Enabled_Exchanges_Medianet, Exchange_Config_Enabled_Exchanges_Tapjoy, Exchange_Config_Enabled_Exchanges_Vistar, Exchange_Config_Enabled_Exchanges_Dax, Exchange_Config_Enabled_Exchanges_Jcd, Exchange_Config_Enabled_Exchanges_Place, Exchange_Config_Enabled_Exchanges_Applovin, Exchange_Config_Enabled_Exchanges_Connatix, Exchange_Config_Enabled_Exchanges_Reset_Digital, Exchange_Config_Enabled_Exchanges_Hivestack, Exchange_Config_Enabled_Exchanges_Drax, Exchange_Config_Enabled_Exchanges_Applovin_Gbid, Exchange_Config_Enabled_Exchanges_Fyber_Gbid, Exchange_Config_Enabled_Exchanges_Unity_Gbid, Exchange_Config_Enabled_Exchanges_Chartboost_Gbid, Exchange_Config_Enabled_Exchanges_Admost_Gbid, Exchange_Config_Enabled_Exchanges_Topon_Gbid, Exchange_Config_Enabled_Exchanges_Netflix, Exchange_Config_Enabled_Exchanges_Google_Ad_Manager_Agency, Exchange_Config_Enabled_Exchanges_Google_Ad_Manager_Buyer_Network, Exchange_Config_Enabled_Exchanges_Seat, Billing_Config_Profile))"
+        },
+        "to": {
+          "dataset": "mapper_dv360",
+          "view": "Attributes_Partners"
+        }
+      }
+    }
+  ]
+}
