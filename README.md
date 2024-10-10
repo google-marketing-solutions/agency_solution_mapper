@@ -45,7 +45,7 @@ This will also create the **Solution Advertiser Mapping** table to connect to th
 
 
 ```
-python ../bqflow/bq.py -dataset mapper_dv360 -u ~/Documents/user.json -p gtech-kenjora -table Solutions -from_json solutions.json -from_schema schema.json 
+python bqflow/bq.py -dataset mapper_dv360 -u ~/Documents/user.json -p gtech-kenjora -table Solutions -from_json solutions.json -from_schema schema.json 
 python bqflow/run.py dv360_mapping.json -u user.json -p gcp_project -v
 ```
 
