@@ -1,0 +1,424 @@
+[{
+  "Solution": "ABCD Assessment Tool (Video)",
+  "Description": "Automatically assessing YouTube video ads for fundamental digital basics",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "elizabethj@google.com, lifantis@google.com, lloydsharma@google.com, tanil@google.com, wito@google.com",
+  "Platforms": "Google Ads - Video (Auction),GMP - DV360",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": "LineItem: Line Item Type Video Default - HIGH"
+}, {
+  "Solution": "ABCD Assessment Tool (YouTube)",
+  "Description": "Automatically assessing YouTube video ads for fundamental digital basics",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "elizabethj@google.com, lifantis@google.com, lloydsharma@google.com, tanil@google.com, wito@google.com",
+  "Platforms": "Google Ads - Display,Google Ads - Video (Auction),GMP - DV360",
+  "Attribute_1": "LineItem: Line Item Type Youtube And Partners Action - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "AdClip",
+  "Description": "Advanced Video creative clipping for multiformat campaigns",
+  "Industries": "Publishers",
+  "Owners": "gvarelal@google.com, tmelachos@google.com",
+  "Platforms": "Google AdManager 360 - Display",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": "LineItem: Line Item Type Video Default - HIGH"
+}, {
+  "Solution": "ADH Youtube Closed Loop Measurement",
+  "Description": "Tailored insights for a provided client around incremental conversions on Youtube",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "danielduela@google.com, deepesh@google.com, jonturnbull@google.com",
+  "Platforms": "Google Ads - mSites / mUX",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Youtube And Partners Settings Inventory Source Include Google Tv - HIGH",
+  "Attribute_3": "LineItem: Youtube And Partners Settings Content Category Expanded - HIGH"
+}, {
+  "Solution": "ADH YouTube CTV Reach Analysis",
+  "Description": "Tailored insights on reach and performance on YouTube CTV",
+  "Industries": "Exchange Platforms",
+  "Owners": "astivi@google.com, esilvey@google.com, jessiefeng@google.com",
+  "Platforms": "Open Bidding",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "AI Advatars",
+  "Description": null,
+  "Industries": "Retail",
+  "Owners": "bseoane@google.com, claireg@google.com, flohregile@google.com, jingjunong@google.com, jneto@google.com, jward@google.com, lushu@google.com, mimr@google.com, mrmts@google.com, vmichon@google.com",
+  "Platforms": "Merchant Center,Google Ads - Shopping",
+  "Attribute_1": "Campaign: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": "LineItem: Targeting Expansion Enable Optimized - HIGH"
+}, {
+  "Solution": "AI Innovation",
+  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
+  "Industries": null,
+  "Owners": null,
+  "Platforms": null,
+  "Attribute_1": "LineItem: Creatives - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
+}, {
+  "Solution": "Census Targeting Kit (BQFlow)",
+  "Description": "Analyze impressions, clicks, and conversaions relative to the US census 200+ dimensions.",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto,Publishers",
+  "Owners": "archival@google.com, artmangabeira@google.com, irischeng@google.com, rclaret@google.com",
+  "Platforms": "Measurement \u0026 Attribution",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
+  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
+}, {
+  "Solution": "CM360 Creative AI Kit (BQFlow)",
+  "Description": "Creative Vision AI analysis for CM360.",
+  "Industries": "Exchange Platforms",
+  "Owners": "esilvey@google.com, nicolecarr@google.com, sccarthy@google.com",
+  "Platforms": "Open Bidding,Authorized Buyers",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": "LineItem: Creatives - HIGH"
+}, {
+  "Solution": "CM360 Data Warehouse (BQFlow)",
+  "Description": null,
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Finance,Tech,Retail,Auto",
+  "Owners": "hupili@google.com, jasminetong@google.com",
+  "Platforms": "Google Ads - Display,Google Ads - Video (Auction),YouTube",
+  "Attribute_1": "LineItem: Creatives - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "CM360 Reporting (BQFlow)",
+  "Description": null,
+  "Industries": "Publishers",
+  "Owners": "lizhangkathy@google.com, noahfeder@google.com",
+  "Platforms": "Google AdManager 360 - DAI (Dynamic Ad insertion),Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager - Video",
+  "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": "LineItem: Targeting Expansion Enable Optimized - HIGH"
+}, {
+  "Solution": "CM360 User Audit",
+  "Description": "Scaled user management in CM360 via either A) Google Sheets or B) BigQuery/Data Studio",
+  "Industries": "Publishers",
+  "Owners": "lizhangkathy@google.com, noahfeder@google.com",
+  "Platforms": "Google AdManager 360 - DAI (Dynamic Ad insertion),Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager - Video",
+  "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Create \u0026 Convert Your Social Demand",
+  "Description": null,
+  "Industries": "Retail",
+  "Owners": "courtneycasey@google.com, ecantor@google.com",
+  "Platforms": "Merchant Center,Google Ads - Shopping",
+  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
+  "Attribute_2": "LineItem: Youtube And Partners Settings Content Category Expanded - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Creative",
+  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
+  "Industries": "Media \u0026 Entertainment",
+  "Owners": "sandhyas@google.com, shreyamurali@google.com",
+  "Platforms": "Google Ads - Search",
+  "Attribute_1": "LineItem: Creatives - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Creative Performance Analysis Tool",
+  "Description": "Dashboard that integrates global Google Ads data to provide top creatives per app genre and benchmark in different markets",
+  "Industries": "Publishers",
+  "Owners": "alak@google.com, sandyquick@google.com",
+  "Platforms": "Google AdManager - Mobile Apps",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": "LineItem: Creatives - HIGH"
+}, {
+  "Solution": "CTV Measurement Consultation",
+  "Description": "Understand the challenges of buying and measuring connected TV through Google platforms and help advertisers structure their CTV tests with measurement in mind.",
+  "Industries": "Travel,Tech,Retail",
+  "Owners": "chii@google.com, chjerry@google.com, dongmao@google.com, effyli@google.com, qkyang@google.com, yunruoliang@google.com",
+  "Platforms": "Google Cloud - Other GCP,Google Ads - Search",
+  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
+  "Attribute_2": "Advertiser: Entity Status Active - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "CTV Publisher Volume Kit (BQFlow)",
+  "Description": "Analyze publisher volume across all campaigns in DV360.",
+  "Industries": "Publishers",
+  "Owners": "alexdurcho@google.com, gvarelal@google.com, jenmargono@google.com",
+  "Platforms": "Google AdManager - Display,Google AdManager - Mobile Apps,Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager 360 - Display,Google AdManager - Video,Google AdManager 360 - Mobile Apps",
+  "Attribute_1": "LineItem: Line Item Type Video Over The Top - HIGH",
+  "Attribute_2": "LineItem: Youtube And Partners Settings Inventory Source Include - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Drive Profitable Growth",
+  "Description": null,
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "juliakudr@google.com, lloydsharma@google.com, pfeneht@google.com, sampowel@google.com",
+  "Platforms": "Google Ads - Video (Auction)",
+  "Attribute_1": "LineItem: Entity Status Active - MEDIUM",
+  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "DV360 Creative Dashboard Kit (BQFlow)",
+  "Description": "Creative intelligence dashboard for DV360.",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "robertmcmahan@google.com, tommcfarlin@google.com",
+  "Platforms": "Google Cloud - Other GCP,Google Cloud - Big Query,Measurement \u0026 Attribution",
+  "Attribute_1": "LineItem: Creatives - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "DV360 Custom Bidding Workshop (including CTV focus)",
+  "Description": "Consultation / Workshop to help clients activate Custom Bidding in DV360.",
+  "Industries": "Publishers",
+  "Owners": "isolomin@google.com, tsho@google.com",
+  "Platforms": "Google AdManager - Display",
+  "Attribute_1": "LineItem: Bid Strategy Performance Goal Auto Type Bidding Custom Algo - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "DV360 Data Warehouse (BQFlow)",
+  "Description": null,
+  "Industries": "Retail",
+  "Owners": "atomas@google.com, ezuchovicki@google.com, nunezarmando@google.com, reyesenzo@google.com",
+  "Platforms": "Google Cloud - Other GCP,GMP - Studio,Google Cloud - Big Query,GMP - DV360",
+  "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": "LineItem: Bid Strategy Maximize Spend Auto Custom Bidding Algorithm - HIGH"
+}, {
+  "Solution": "DV360 LineItem To Creative Append Kit (BQFlow)",
+  "Description": "Automatically assigns creatives to line items based on naming convention.",
+  "Industries": "Publishers",
+  "Owners": "rivenchu@google.com",
+  "Platforms": "null",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH"
+}, {
+  "Solution": "DV360 Maturity Targeting Kit (BQFlow)",
+  "Description": "Checks if adverrtiser level brand safety settings are set in DV360.",
+  "Industries": "Publishers",
+  "Owners": "rivenchu@google.com, shanq@google.com",
+  "Platforms": "Google AdManager - Mobile Apps,AdMob",
+  "Attribute_1": "LineItem: Youtube And Partners Settings Inventory Source Include - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "DV360 Pacing Kit (BQFlow)",
+  "Description": "Analyzes pacing across Campaign/IO/LI and flags outliers in a dashboard.",
+  "Industries": "Retail",
+  "Owners": "akort@google.com, rihito@google.com, sebyoshii@google.com",
+  "Platforms": "Google Ads - Shopping",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Bid Strategy Maximize Spend Auto Custom Bidding Algorithm - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "DV360 Reporting (BQFlow)",
+  "Description": null,
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "irischeng@google.com, lushu@google.com",
+  "Platforms": "Analytics Suite,Campaign Manager,SA360,Measurement \u0026 Attribution,Google Ads - Shopping,Google Ads - Search",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "DV360 User Audit",
+  "Description": "Scaled user management in DV360 via either A) Google Sheets or B) BigQuery/Data Studio\n",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "archival@google.com, bseoane@google.com, dematos@google.com, flohregile@google.com, juhisahai@google.com, nielsoverwijn@google.com",
+  "Platforms": "Analytics Suite,Measurement \u0026 Attribution",
+  "Attribute_1": "Advertiser: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Enable Your Video Up Front Strategy",
+  "Description": null,
+  "Industries": "Media \u0026 Entertainment,Pharma \u0026 Healthcare,Apps,Agencies \u0026 Partners,Government \u0026 Advocacy",
+  "Owners": "eladb@google.com",
+  "Platforms": "Google Ads - Search",
+  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
+  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
+  "Attribute_3": "LineItem: Entity Status Active - HIGH"
+}, {
+  "Solution": "Geo Branding Kit",
+  "Description": "Analyze impressions, clicks, and conversions relative to points of interest. Also shows landmarks correlated with performance.",
+  "Industries": "Publishers",
+  "Owners": "gijtenbeek@google.com, mazetti@google.com",
+  "Platforms": "null",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Grow Your Awareness \u0026 Consideration",
+  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
+  "Industries": "Agencies \u0026 Partners",
+  "Owners": "kaano@google.com, nicolasoren@google.com, oriolm@google.com",
+  "Platforms": "Google Ads - mApps,Google Ads - mSites / mUX",
+  "Attribute_1": "Campaign: Campaign Goal Type Online Action - HIGH",
+  "Attribute_2": "Advertiser: Update Time 180 - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Margin Protection-CM",
+  "Description": "Alerts on common user errors with disproportionate impact on margins",
+  "Industries": "Agencies \u0026 Partners,Retail",
+  "Owners": "johnstafford@google.com, jtmugere@google.com, umakantodutta@google.com",
+  "Platforms": "Google Cloud - Other GCP,Google Cloud - Big Query,Merchant Center,Google Ads - Shopping",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Dv360 To Cost Reporting Enabled - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Margin Protection-DV",
+  "Description": "Alerts on common user errors with disproportionate impact on margins",
+  "Industries": "Publishers",
+  "Owners": "jayweezhang@google.com, tennichi@google.com",
+  "Platforms": "AdMob",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
+  "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH"
+}, {
+  "Solution": "Maximize Your Sales",
+  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
+  "Industries": "Retail",
+  "Owners": "blakegoodwin@google.com",
+  "Platforms": "Merchant Center,Google Ads - Shopping",
+  "Attribute_1": "LineItem: Entity Status Active - MEDIUM",
+  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - LOW",
+  "Attribute_3": "LineItem: Budget Max Amount - HIGH"
+}, {
+  "Solution": "Measurment \u0026 Analytics",
+  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
+  "Industries": "Publishers",
+  "Owners": "kanata@google.com",
+  "Platforms": "Google AdManager - Display,AdSense for Content,Google AdManager 360 - Display",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Media Activation \u0026 Optimization",
+  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
+  "Industries": "Media \u0026 Entertainment",
+  "Owners": "daveshb@google.com, jstocklin@google.com",
+  "Platforms": "Google Ads - Search",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
+}, {
+  "Solution": "Megalista",
+  "Description": "Efficient way to ingest data into Google\u0027s Advertising Platforms",
+  "Industries": "Travel",
+  "Owners": "jamesoconnor@google.com",
+  "Platforms": "Google Flights and Travel products",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Budget Max Amount - HIGH",
+  "Attribute_3": "LineItem: Targeting Expansion Audience Level Least Reach - MEDIUM"
+}, {
+  "Solution": "ML-Propensity Bidder",
+  "Description": "Custom Bidding made easy through ML",
+  "Industries": "Exchange Platforms",
+  "Owners": "alyssarey@google.com, cindygao@google.com",
+  "Platforms": "Open Bidding,Authorized Buyers",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Operational Efficiency",
+  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "chii@google.com, chyt@google.com, guyi@google.com, sicongchen@google.com",
+  "Platforms": "Merchant Center,Google Ads - Shopping,Google Ads - mApps,Google Ads - Search",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": "LineItem: Creatives - HIGH"
+}, {
+  "Solution": "Power Your AI",
+  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "buhuang@google.com, lushu@google.com",
+  "Platforms": "GMP - DV360",
+  "Attribute_1": "LineItem: Creatives - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
+}, {
+  "Solution": "QR Code for CTV",
+  "Description": "Improve attribution measurement in the fragemented CTV space",
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "chjerry@google.com, ektakahashi@google.com, ellenmezera@google.com, gorock@google.com, rtachibana@google.com, yiruo@google.com",
+  "Platforms": "YouTube Reserve,Google Ads - Video (Auction),GMP - DV360,Measurement \u0026 Attribution,Google Ads - Shopping,YouTube,Google Ads - mApps,YouTube - Premieres,Google Ads - Search",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Line Item Type Youtube And Partners Simple Over The Top - HIGH",
+  "Attribute_3": "LineItem: Line Item Type Youtube And Partners View - LOW"
+}, {
+  "Solution": "RBA Optimizer",
+  "Description": "Durable Attribution through Regression",
+  "Industries": "Exchange Platforms",
+  "Owners": "esilvey@google.com",
+  "Platforms": "Authorized Buyers",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
+  "Attribute_3": "LineItem: Budget Max Amount - HIGH"
+}, {
+  "Solution": "Revenue Generating Capability",
+  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
+  "Industries": "Media \u0026 Entertainment,Travel,CPG,Apps,Agencies \u0026 Partners,Retail,Auto",
+  "Owners": "mfekry@google.com",
+  "Platforms": "Analytics Suite,Campaign Manager,Google Cloud - Other GCP,Google Ads - Display,SA360,Google Cloud - Big Query,GMP - DV360,Google Ads - Search",
+  "Attribute_1": "LineItem: Entity Status Active - MEDIUM",
+  "Attribute_2": "LineItem: Bid Strategy Performance Goal Auto Type Bidding Custom Algo - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Shape Shifters (BQFlow)",
+  "Description": null,
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Tech,Retail,Auto",
+  "Owners": "dnachbar@google.com, omrigoldstein@google.com",
+  "Platforms": "Google Ads - Display,Google Ads - Video (Auction),Google Cloud - Big Query,Google Ads - Shopping,Google Ads - mApps,Google Ads - Search,Google Ads - mSites / mUX",
+  "Attribute_1": "LineItem: Creatives - HIGH",
+  "Attribute_2": "LineItem: Creatives - HIGH",
+  "Attribute_3": "LineItem: Targeting Expansion Enable Optimized - HIGH"
+}, {
+  "Solution": "Unlock Full Value Of Web + App",
+  "Description": null,
+  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
+  "Owners": "fjune@google.com, mnaka@google.com, nrihos@google.com, taisukek@google.com",
+  "Platforms": "Measurement \u0026 Attribution,Google Ads - Search",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "Campaign: Campaign Goal Type App Install - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Unlock Your Video On DV360",
+  "Description": null,
+  "Industries": "Publishers",
+  "Owners": "nathnunes@google.com, rheck@google.com, tmelachos@google.com, willhessel@google.com, wurman@google.com",
+  "Platforms": "Google AdManager 360 - Video",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": null
+}, {
+  "Solution": "Weather Targeting Kit (BQFlow)",
+  "Description": null,
+  "Industries": "Exchange Platforms",
+  "Owners": "nicolecarr@google.com",
+  "Platforms": "Open Bidding",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Bid Strategy Maximize Spend Auto Custom Bidding Algorithm - HIGH",
+  "Attribute_3": "LineItem: Bid Strategy Performance Goal Auto Custom Bidding Algorithm - HIGH"
+}, {
+  "Solution": "Web \u0026 App UX Consultation",
+  "Description": "Server provided by gPS, User Experience audit to improve mobile site engagement, identify user drop-off points, and kickstart or improve a customer’s AB Testing program.",
+  "Industries": "Travel",
+  "Owners": "bengauss@google.com, miamiosotis@google.com",
+  "Platforms": "Google Flights and Travel products",
+  "Attribute_1": "LineItem: Entity Status Active - HIGH",
+  "Attribute_2": "LineItem: Entity Status Active - HIGH",
+  "Attribute_3": "Advertiser: Entity Status Active - HIGH"
+}, {
+  "Solution": "YouTube Sentiment Analysis",
+  "Description": "Perform sentiment analysis on YouTube comment data for a given YouTube Video ID",
+  "Industries": "Publishers",
+  "Owners": "dconca@google.com, massarellim@google.com",
+  "Platforms": "Google AdManager - Display,Google AdManager 360 - DAI (Dynamic Ad insertion),Google AdManager - Mobile Apps,Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager 360 - Display,Google AdManager - Video,Google AdManager 360 - Mobile Apps",
+  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
+  "Attribute_2": "LineItem: Line Item Type Youtube And Partners Action - HIGH",
+  "Attribute_3": null
+}]

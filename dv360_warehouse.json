@@ -1,0 +1,128 @@
+{
+  "tasks": [
+    {
+      "dataset": {
+        "description": "Create dataset.",
+        "auth": "service",
+        "dataset": "mapper_dv360"
+      }
+    },
+    {
+      "google_api": {
+        "description": "Pull my partners.",
+        "api": "displayvideo",
+        "version": "v3",
+        "auth": "service",
+        "function": "partners.get",
+        "iterate": false,
+        "kwargs": {
+          "partnerId": "955110"
+        },
+        "results": {
+          "bigquery": {
+            "auth": "service",
+            "dataset": "mapper_dv360",
+            "table": "DV360_Partners"
+          }
+        }
+      }
+    },
+    {
+      "google_api": {
+        "description": "Pull my advertiser.",
+        "api": "displayvideo",
+        "version": "v3",
+        "auth": "service",
+        "function": "advertisers.list",
+        "iterate": true,
+        "kwargs_remote": {
+          "bigquery": {
+            "auth": "service",
+            "dataset": "mapper_dv360",
+            "query": "SELECT DISTINCT CAST(partnerId  AS STRING) partnerId FROM `DV360_Partners`"
+          }
+        },
+        "results": {
+          "bigquery": {
+            "auth": "service",
+            "dataset": "mapper_dv360",
+            "table": "DV360_Advertisers"
+          }
+        }
+      }
+    },
+    {
+      "google_api": {
+        "description": "Pull my line items.",
+        "api": "displayvideo",
+        "version": "v3",
+        "auth": "service",
+        "function": "advertisers.lineItems.list",
+        "iterate": true,
+        "kwargs_remote": {
+          "bigquery": {
+            "auth": "service",
+            "dataset": "mapper_dv360",
+            "query": "SELECT DISTINCT CAST(advertiserId AS STRING) AS advertiserId FROM `DV360_Advertisers`"
+          }
+        },
+        "results": {
+          "bigquery": {
+            "auth": "service",
+            "dataset": "mapper_dv360",
+            "table": "DV360_LineItems"
+          }
+        }
+      }
+    },
+    {
+      "google_api": {
+        "description": "Pull my campaigns.",
+        "api": "displayvideo",
+        "version": "v3",
+        "auth": "service",
+        "function": "advertisers.campaigns.list",
+        "iterate": true,
+        "kwargs_remote": {
+          "bigquery": {
+            "auth": "service",
+            "dataset": "mapper_dv360",
+            "query": "SELECT DISTINCT CAST(advertiserId AS STRING) AS advertiserId FROM `DV360_Advertisers`"
+          }
+        },
+        "results": {
+          "bigquery": {
+            "auth": "service",
+            "dataset": "mapper_dv360",
+            "table": "DV360_Campaigns"
+          }
+        }
+      }
+    },
+    {
+      "google_api": {
+        "description": "Pull my creatives.",
+        "api": "displayvideo",
+        "version": "v3",
+        "auth": "user",
+        "function": "advertisers.creatives.list",
+        "iterate": true,
+        "kwargs_remote": {
+          "bigquery": {
+            "auth": "user",
+            "dataset": "mapper_dv360",
+            "comment": "500 LIMIT / (12 text + 11 id + 4 or) = 500 / 27 = 18 ids per call",
+            "query": "SELECT advertiserId, ARRAY_TO_STRING(ARRAY_AGG(FORMAT('lineItemIds:%s', lineItemId)) OVER(PARTITION BY advertiserId ORDER BY num ASC RANGE BETWEEN CURRENT ROW AND 17 FOLLOWING), ' OR ') AS filter, 'creatives.advertiserId,creatives.creativeId,creatives.reviewStatus.approvalStatus,nextPageToken' AS fields, 200 AS pageSize FROM ( SELECT advertiserId, lineItemId, ROW_NUMBER() OVER(PARTITION BY advertiserId ORDER BY lineItemId ASC) AS num FROM `mapper_dv360.DV360_LineItems` AS L ) QUALIFY MOD(num, 18) = 1"
+          }
+        },
+        "results": {
+          "bigquery": {
+            "auth": "user",
+            "dataset": "mapper_dv360",
+            "table": "DV360_Creatives"
+          }
+        }
+      }
+    }
+  ]
+}

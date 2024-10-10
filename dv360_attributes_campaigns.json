@@ -1,0 +1,142 @@
+{
+  "tasks": [
+    {
+      "dataset": {
+        "description": "Create the mapper_dv360 dataset.",
+        "auth": "user",
+        "dataset": "mapper_dv360"
+      }
+    },
+    {
+      "bigquery": {
+        "description": "Create the Attributes_Campaigns view.",
+        "auth": "user",
+        "from": {
+          "query": "SELECT
+   * EXCEPT(Value) REPLACE(CONCAT('Campaign: ', REPLACE(attribute, '_', ' ')) AS Attribute),
+  CASE
+    WHEN Attribute IN (
+      'Campaign_Segment_Past',
+      'Campaign_Segment_Present'
+      'Campaign_Segment_Future'
+    ) THEN SAFE_DIVIDE(Value - MIN(Value) OVER(), MAX(Value) OVER(PARTITION BY advertiserId) - MIN(Value) OVER(PARTITION BY advertiserId))
+    ELSE SAFE_DIVIDE(Value, MAX(Value) OVER(PARTITION BY advertiserId))
+  END AS Score
+FROM (
+SELECT
+  partnerId,
+  Partner,
+  advertiserId,
+  Advertiser,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_UNSPECIFIED') AS Entity_Status_Unspecified,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_ACTIVE') AS Entity_Status_Active,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_ARCHIVED') AS Entity_Status_Archived,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_DRAFT') AS Entity_Status_Draft,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_PAUSED') AS Entity_Status_Paused,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION') AS Entity_Status_Scheduled_For_Deletion,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_7,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_30,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_90,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_180,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_365,
+  COUNTIF(campaignGoal.campaignGoalType = 'CAMPAIGN_GOAL_TYPE_UNSPECIFIED') AS Campaign_Goal_Type_Unspecified,
+  COUNTIF(campaignGoal.campaignGoalType = 'CAMPAIGN_GOAL_TYPE_APP_INSTALL') AS Campaign_Goal_Type_App_Install,
+  COUNTIF(campaignGoal.campaignGoalType = 'CAMPAIGN_GOAL_TYPE_BRAND_AWARENESS') AS Campaign_Goal_Type_Brand_Awareness,
+  COUNTIF(campaignGoal.campaignGoalType = 'CAMPAIGN_GOAL_TYPE_OFFLINE_ACTION') AS Campaign_Goal_Type_Offline_Action,
+  COUNTIF(campaignGoal.campaignGoalType = 'CAMPAIGN_GOAL_TYPE_ONLINE_ACTION') AS Campaign_Goal_Type_Online_Action,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_UNSPECIFIED') AS Campaign_Goal_Performance_Type_Unspecified,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_CPM') AS Campaign_Goal_Performance_Type_Cpm,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_CPC') AS Campaign_Goal_Performance_Type_Cpc,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_CPA') AS Campaign_Goal_Performance_Type_Cpa,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_CTR') AS Campaign_Goal_Performance_Type_Ctr,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_VIEWABILITY') AS Campaign_Goal_Performance_Type_Viewability,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_CPIAVC') AS Campaign_Goal_Performance_Type_Cpiavc,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_CPE') AS Campaign_Goal_Performance_Type_Cpe,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_CLICK_CVR') AS Campaign_Goal_Performance_Type_Click_Cvr,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_IMPRESSION_CVR') AS Campaign_Goal_Performance_Type_Impression_Cvr,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_VCPM') AS Campaign_Goal_Performance_Type_Vcpm,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_VTR') AS Campaign_Goal_Performance_Type_Vtr,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_AUDIO_COMPLETION_RATE') AS Campaign_Goal_Performance_Type_Audio_Completion_Rate,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_VIDEO_COMPLETION_RATE') AS Campaign_Goal_Performance_Type_Video_Completion_Rate,
+  COUNTIF(campaignGoal.performanceGoal.performanceGoalType = 'PERFORMANCE_GOAL_TYPE_OTHER') AS Campaign_Goal_Performance_Type_Other,
+
+  CAST(MAX(campaignGoal.performanceGoal.performanceGoalAmountMicros) AS INT64) AS Campaign_Goal_Performance_Amount_Micros,
+  CAST(MAX(campaignGoal.performanceGoal.performanceGoalPercentageMicros) AS INT64) AS Campaign_Goal_Performance_Percentage_Micros,
+  COUNT(DISTINCT campaignGoal.performanceGoal.performanceGoalString) AS Campaign_Goal_Performance_String,
+
+  COUNT(DISTINCT campaignFlight.plannedSpendAmountMicros) AS Campaign_Flight_Planned_Spend_Amount_Micros,
+  COUNT(DISTINCT campaignFlight.plannedDates.startDate.year) AS Campaign_Flight_Planned_Dates_Start_Date_Year,
+  COUNT(DISTINCT campaignFlight.plannedDates.startDate.month) AS Campaign_Flight_Planned_Dates_Start_Date_Month,
+  COUNT(DISTINCT campaignFlight.plannedDates.startDate.day) AS Campaign_Flight_Planned_Dates_Start_Date_Day,
+  COUNT(DISTINCT campaignFlight.plannedDates.endDate.year) AS Campaign_Flight_Planned_Dates_End_Date_Year,
+  COUNT(DISTINCT campaignFlight.plannedDates.endDate.month) AS Campaign_Flight_Planned_Dates_End_Date_Month,
+  COUNT(DISTINCT campaignFlight.plannedDates.endDate.day) AS Campaign_Flight_Planned_Dates_End_Date_Day,
+
+  COUNTIF(frequencyCap.unlimited) AS Frequency_Cap_Unlimited,
+  COUNTIF(frequencyCap.timeUnit = 'TIME_UNIT_UNSPECIFIED') AS Frequency_Cap_Time_Unit_Unspecified,
+  COUNTIF(frequencyCap.timeUnit = 'TIME_UNIT_LIFETIME') AS Frequency_Cap_Time_Unit_Lifetime,
+  COUNTIF(frequencyCap.timeUnit = 'TIME_UNIT_MONTHS') AS Frequency_Cap_Time_Unit_Months,
+  COUNTIF(frequencyCap.timeUnit = 'TIME_UNIT_WEEKS') AS Frequency_Cap_Time_Unit_Weeks,
+  COUNTIF(frequencyCap.timeUnit = 'TIME_UNIT_DAYS') AS Frequency_Cap_Time_Unit_Days,
+  COUNTIF(frequencyCap.timeUnit = 'TIME_UNIT_HOURS') AS Frequency_Cap_Time_Unit_Hours,
+  COUNTIF(frequencyCap.timeUnit = 'TIME_UNIT_MINUTES') AS Frequency_Cap_Time_Unit_Minutes,
+  COUNT(DISTINCT frequencyCap.timeUnitCount) AS Frequency_Cap_Time_Unit_Count,
+  COUNT(DISTINCT frequencyCap.maxImpressions) AS Frequency_Cap_Max_Impressions,
+  COUNT(DISTINCT frequencyCap.maxViews) AS Frequency_Cap_Max_Views,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Budget,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Display_Name,
+  SUM((SELECT COUNT(DISTINCT budgetUnit) FROM UNNEST(campaignBudgets) WHERE budgetUnit = 'BUDGET_UNIT_UNSPECIFIED')) AS Campaign_Budgets_Budget_Unit_Unspecified,
+  SUM((SELECT COUNT(DISTINCT budgetUnit) FROM UNNEST(campaignBudgets) WHERE budgetUnit = 'BUDGET_UNIT_CURRENCY')) AS Campaign_Budgets_Budget_Unit_Currency,
+  SUM((SELECT COUNT(DISTINCT budgetUnit) FROM UNNEST(campaignBudgets) WHERE budgetUnit = 'BUDGET_UNIT_IMPRESSIONS')) AS Campaign_Budgets_Budget_Unit_Impressions,
+
+  SUM((
+    SELECT COUNT(dateRange.endDate.day)
+    FROM UNNEST(campaignBudgets)
+    WHERE TIMESTAMP(DATE(dateRange.endDate.year, dateRange.endDate.month, dateRange.endDate.day)) < CURRENT_TIMESTAMP()
+  )) AS Campaign_Segment_Past,
+  SUM((
+    SELECT COUNT(dateRange.startDate.day)
+    FROM UNNEST(campaignBudgets)
+    WHERE TIMESTAMP(DATE(dateRange.startDate.year, dateRange.startDate.month, dateRange.startDate.day)) < CURRENT_TIMESTAMP()
+  )) AS Campaign_Segment_Future,
+
+  SUM((
+    SELECT COUNT(dateRange.startDate.day)
+    FROM UNNEST(campaignBudgets)
+    WHERE CURRENT_TIMESTAMP() BETWEEN TIMESTAMP(DATE(dateRange.startDate.year, dateRange.startDate.month, dateRange.startDate.day)) AND TIMESTAMP(DATE(dateRange.endDate.year, dateRange.endDate.month, dateRange.endDate.day))
+  )) AS Campaign_Segment_Present,
+
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Budget_Amount_Micros,
+
+  SUM((SELECT COUNT(externalBudgetSource) FROM UNNEST(campaignBudgets) WHERE externalBudgetSource = 'EXTERNAL_BUDGET_SOURCE_UNSPECIFIED')) AS Campaign_Budgets_External_Budget_Source_Unspecified,
+  SUM((SELECT COUNT(DISTINCT externalBudgetSource) FROM UNNEST(campaignBudgets) WHERE externalBudgetSource = 'EXTERNAL_BUDGET_SOURCE_NONE')) AS Campaign_Budgets_External_Budget_Source_None,
+  SUM((SELECT COUNT(DISTINCT externalBudgetSource) FROM UNNEST(campaignBudgets) WHERE externalBudgetSource = 'EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN')) AS Campaign_Budgets_External_Budget_Source_Media_Ocean,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_External_Budget,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Invoice_Grouping,
+  SUM((SELECT COUNT(DISTINCT prismaConfig.prismaType) FROM UNNEST(campaignBudgets) WHERE prismaConfig.prismaType = 'PRISMA_TYPE_UNSPECIFIED')) AS Campaign_Budgets_Prisma_Config_Type_Unspecified,
+  SUM((SELECT COUNT(DISTINCT prismaConfig.prismaType) FROM UNNEST(campaignBudgets) WHERE prismaConfig.prismaType = 'PRISMA_TYPE_DISPLAY')) AS Campaign_Budgets_Prisma_Config_Type_Display,
+  SUM((SELECT COUNT(DISTINCT prismaConfig.prismaType) FROM UNNEST(campaignBudgets) WHERE prismaConfig.prismaType = 'PRISMA_TYPE_SEARCH')) AS Campaign_Budgets_Prisma_Config_Type_Search,
+  SUM((SELECT COUNT(DISTINCT prismaConfig.prismaType) FROM UNNEST(campaignBudgets) WHERE prismaConfig.prismaType = 'PRISMA_TYPE_VIDEO')) AS Campaign_Budgets_Prisma_Config_Type_Video,
+  SUM((SELECT COUNT(DISTINCT prismaConfig.prismaType) FROM UNNEST(campaignBudgets) WHERE prismaConfig.prismaType = 'PRISMA_TYPE_AUDIO')) AS Campaign_Budgets_Prisma_Config_Type_Audio,
+  SUM((SELECT COUNT(DISTINCT prismaConfig.prismaType) FROM UNNEST(campaignBudgets) WHERE prismaConfig.prismaType = 'PRISMA_TYPE_SOCIAL')) AS Campaign_Budgets_Prisma_Config_Type_Social,
+  SUM((SELECT COUNT(DISTINCT prismaConfig.prismaType) FROM UNNEST(campaignBudgets) WHERE prismaConfig.prismaType = 'PRISMA_TYPE_FEE')) AS Campaign_Budgets_Prisma_Config_Type_Fee,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Prisma_Config_Cpe_Code_Client,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Prisma_Config_Cpe_Code_Product,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Prisma_Config_Cpe_Code_Estimate,
+  SUM(ARRAY_LENGTH(campaignBudgets)) AS Campaign_Budgets_Prisma_Config_Supplier,
+FROM `mapper_dv360.DV360_Campaigns`
+LEFT JOIN (SELECT partnerId, advertiserId, CONCAT(displayName, ' - ', advertiserId) AS Advertiser FROM `mapper_dv360.DV360_Advertisers`) USING(advertiserId)
+LEFT JOIN (SELECT partnerId, CONCAT(displayName, ' - ', partnerId) AS Partner FROM `mapper_dv360.DV360_Partners`) USING(partnerId)
+WHERE entityStatus != 'ENTITY_STATUS_ARCHIVED'
+GROUP BY 1,2,3,4
+)
+UNPIVOT(value FOR Attribute IN (Entity_Status_Unspecified, Entity_Status_Active, Entity_Status_Archived, Entity_Status_Draft, Entity_Status_Paused, Entity_Status_Scheduled_For_Deletion, Update_Time_7, Update_Time_30, Update_Time_90, Update_Time_180, Update_Time_365, Campaign_Goal_Type_Unspecified, Campaign_Goal_Type_App_Install, Campaign_Goal_Type_Brand_Awareness, Campaign_Goal_Type_Offline_Action, Campaign_Goal_Type_Online_Action, Campaign_Goal_Performance_Type_Unspecified, Campaign_Goal_Performance_Type_Cpm, Campaign_Goal_Performance_Type_Cpc, Campaign_Goal_Performance_Type_Cpa, Campaign_Goal_Performance_Type_Ctr, Campaign_Goal_Performance_Type_Viewability, Campaign_Goal_Performance_Type_Cpiavc, Campaign_Goal_Performance_Type_Cpe, Campaign_Goal_Performance_Type_Click_Cvr, Campaign_Goal_Performance_Type_Impression_Cvr, Campaign_Goal_Performance_Type_Vcpm, Campaign_Goal_Performance_Type_Vtr, Campaign_Goal_Performance_Type_Audio_Completion_Rate, Campaign_Goal_Performance_Type_Video_Completion_Rate, Campaign_Goal_Performance_Type_Other, Campaign_Goal_Performance_Amount_Micros, Campaign_Goal_Performance_Percentage_Micros, Campaign_Goal_Performance_String, Campaign_Flight_Planned_Spend_Amount_Micros, Campaign_Flight_Planned_Dates_Start_Date_Year, Campaign_Flight_Planned_Dates_Start_Date_Month, Campaign_Flight_Planned_Dates_Start_Date_Day, Campaign_Flight_Planned_Dates_End_Date_Year, Campaign_Flight_Planned_Dates_End_Date_Month, Campaign_Flight_Planned_Dates_End_Date_Day, Frequency_Cap_Unlimited, Frequency_Cap_Time_Unit_Unspecified, Frequency_Cap_Time_Unit_Lifetime, Frequency_Cap_Time_Unit_Months, Frequency_Cap_Time_Unit_Weeks, Frequency_Cap_Time_Unit_Days, Frequency_Cap_Time_Unit_Hours, Frequency_Cap_Time_Unit_Minutes, Frequency_Cap_Time_Unit_Count, Frequency_Cap_Max_Impressions, Frequency_Cap_Max_Views, Campaign_Budgets_Budget, Campaign_Budgets_Display_Name, Campaign_Budgets_Budget_Unit_Unspecified, Campaign_Budgets_Budget_Unit_Currency, Campaign_Budgets_Budget_Unit_Impressions, Campaign_Budgets_Budget_Amount_Micros, Campaign_Segment_Past, Campaign_Segment_Present, Campaign_Segment_Future, Campaign_Budgets_External_Budget_Source_Unspecified, Campaign_Budgets_External_Budget_Source_None, Campaign_Budgets_External_Budget_Source_Media_Ocean, Campaign_Budgets_External_Budget, Campaign_Budgets_Invoice_Grouping, Campaign_Budgets_Prisma_Config_Type_Unspecified, Campaign_Budgets_Prisma_Config_Type_Display, Campaign_Budgets_Prisma_Config_Type_Search, Campaign_Budgets_Prisma_Config_Type_Video, Campaign_Budgets_Prisma_Config_Type_Audio, Campaign_Budgets_Prisma_Config_Type_Social, Campaign_Budgets_Prisma_Config_Type_Fee, Campaign_Budgets_Prisma_Config_Cpe_Code_Client, Campaign_Budgets_Prisma_Config_Cpe_Code_Product, Campaign_Budgets_Prisma_Config_Cpe_Code_Estimate, Campaign_Budgets_Prisma_Config_Supplier))"
+        },
+        "to": {
+          "dataset": "mapper_dv360",
+          "view": "Attributes_Campaigns"
+        }
+      }
+    }
+  ]
+}

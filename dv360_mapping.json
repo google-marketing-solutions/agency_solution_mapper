@@ -1,0 +1,93 @@
+{
+  "tasks": [
+    {
+      "dataset": {
+        "description": "Create the mapper_dv360 dataset.",
+        "auth": "user",
+        "dataset": "mapper_dv360"
+      }
+    },
+    {
+      "bigquery": {
+        "description": "Create the Solution_Advertiser_Mapping view.",
+        "auth": "user",
+        "from": {
+          "query": "WITH SOLUTIONS AS (
+  SELECT
+    Solution,
+    Description,
+    SPLIT(Attribute, ' - ')[OFFSET(0)] AS Attribute,
+    SPLIT(Attribute, ' - ')[OFFSET(1)] AS Signal,
+    Industries,
+    Platforms,
+    Owners,
+  FROM `mapper_dv360.Solutions`
+  UNPIVOT (attribute FOR name IN (Attribute_1, Attribute_2, Attribute_3))
+  WHERE Attribute LIKE '% - %'
+),
+
+ATTRIBUTES AS (
+  SELECT
+    'Partner' AS Layer,
+    *
+  FROM
+    `mapper_dv360.Attributes_Partners`
+  UNION ALL
+  SELECT
+    'Advertiser' AS Layer,
+    *
+  FROM
+    `mapper_dv360.Attributes_Advertisers`
+  UNION ALL
+  SELECT
+    'Campaign' AS Layer,
+    *
+  FROM
+    `mapper_dv360.Attributes_Campaigns`
+  UNION ALL
+  SELECT
+    'LineItem' AS Layer,
+    *
+  FROM
+    `mapper_dv360.Attributes_LineItems`
+),
+
+SCORES AS (
+  SELECT
+    Solution,
+    Description,
+    Industries,
+    Platforms,
+    Owners,
+    Partner,
+    Advertiser,
+    LEAST(AVG(CASE
+      WHEN A.Score IS NULL THEN 0
+      WHEN Signal = 'HIGH' THEN COALESCE(A.Score, 0)
+      WHEN Signal = 'LOW' THEN 1 - COALESCE(A.Score, 0)
+      WHEN Signal = 'MEDIUM' THEN 1 - (ABS(0.5 - COALESCE(A.Score, 0)) * 2)
+      ELSE NULL
+    END), 1) AS Score
+  FROM
+    SOLUTIONS AS S
+  JOIN
+    ATTRIBUTES AS A
+  USING(Attribute)
+  GROUP BY 1,2,3,4,5,6,7
+)
+
+SELECT
+  * REPLACE(SPLIT(Industries, ',') AS Industries, SPLIT(Owners, ',') AS Owners, SPLIT(Platforms, ',') AS Platforms)
+FROM SCORES
+WHERE Score > 0.6
+
+         "
+        },
+        "to": {
+          "dataset": "mapper_dv360",
+          "view": "Solution_Advertiser_Mapping"
+        }
+      }
+    }
+  ]
+}

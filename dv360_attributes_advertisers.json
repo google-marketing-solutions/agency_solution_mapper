@@ -1,0 +1,94 @@
+{
+  "tasks": [
+    {
+      "dataset": {
+        "description": "Create the mapper_dv360 dataset.",
+        "auth": "user",
+        "dataset": "mapper_dv360"
+      }
+    },
+    {
+      "bigquery": {
+        "description": "Create the Attributes_Advertisers view.",
+        "auth": "user",
+        "from": {
+          "query": "SELECT
+  * EXCEPT(Value) REPLACE(CONCAT('Advertiser: ', REPLACE(attribute, '_', ' ')) AS Attribute),
+  CASE
+    WHEN Attribute IN (
+      'General_Config_Domain_Url',
+      'General_Config_Time_Zone'
+      'General_Config_Currency_Code',
+      'Data_Access_Config_Sdf_Version'
+    ) THEN SAFE_DIVIDE(Value - MIN(Value) OVER(), MAX(Value) OVER(PARTITION BY partnerId) - MIN(Value) OVER(PARTITION BY partnerId))
+    ELSE SAFE_DIVIDE(Value, MAX(Value) OVER(PARTITION BY partnerId))
+  END AS Score
+FROM (
+  SELECT
+  partnerId,
+  Partner,
+  advertiserId,
+  CONCAT(displayName, ' - ', advertiserId) AS Advertiser,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_UNSPECIFIED') AS Entity_Status_Unspecified,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_ACTIVE') AS Entity_Status_Active,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_ARCHIVED') AS Entity_Status_Archived,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_DRAFT') AS Entity_Status_Draft,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_PAUSED') AS Entity_Status_Paused,
+  COUNTIF(entityStatus = 'ENTITY_STATUS_SCHEDULED_FOR_DELETION') AS Entity_Status_Scheduled_For_Deletion,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_7,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_30,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_90,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_180,
+  COUNTIF(TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), TIMESTAMP(updateTime), DAY)  BETWEEN 0 AND 30) AS Update_Time_365,
+  COUNT(DISTINCT generalConfig.domainUrl) AS General_Config_Domain_Url,
+  COUNT(DISTINCT generalConfig.timeZone) AS General_Config_Time_Zone,
+  COUNT(DISTINCT generalConfig.currencyCode) AS General_Config_Currency_Code,
+  COUNTIF(adServerConfig.thirdPartyOnlyConfig.pixelOrderIdReportingEnabled) AS Ad_Server_Config_Third_Party_Only_Pixel_Order_Reporting_Enabled,
+  COUNT(DISTINCT adServerConfig.cmHybridConfig.cmAccountId) AS Ad_Server_Config_Cm_Hybrid_Account,
+  COUNT(DISTINCT adServerConfig.cmHybridConfig.cmFloodlightConfigId) AS Ad_Server_Config_Cm_Hybrid_Floodlight,
+  SUM(ARRAY_LENGTH(adServerConfig.cmHybridConfig.cmAdvertiserIds)) AS Ad_Server_Config_Cm_Hybrid_Advertisers,
+  SUM(ARRAY_LENGTH(adServerConfig.cmHybridConfig.cmSyncableSiteIds)) AS Ad_Server_Config_Cm_Hybrid_Syncable_Sites,
+  COUNTIF(adServerConfig.cmHybridConfig.dv360ToCmDataSharingEnabled) AS Ad_Server_Config_Cm_Hybrid_Dv360_To_Data_Sharing_Enabled,
+  COUNTIF(adServerConfig.cmHybridConfig.dv360ToCmCostReportingEnabled) AS Ad_Server_Config_Cm_Hybrid_Dv360_To_Cost_Reporting_Enabled,
+  COUNTIF(adServerConfig.cmHybridConfig.cmFloodlightLinkingAuthorized) AS Ad_Server_Config_Cm_Hybrid_Floodlight_Linking_Authorized,
+  COUNT(DISTINCT creativeConfig.iasClientId) AS Creative_Config_Ias_Client,
+  COUNTIF(creativeConfig.obaComplianceDisabled) AS Creative_Config_Oba_Compliance_Disabled,
+  COUNTIF(creativeConfig.dynamicCreativeEnabled) AS Creative_Config_Dynamic_Enabled,
+  COUNTIF(creativeConfig.videoCreativeDataSharingAuthorized) AS Creative_Config_Video_Data_Sharing_Authorized,
+  COUNTIF(dataAccessConfig.sdfConfig.overridePartnerSdfConfig) AS Data_Access_Config_Sdf_Override_Partner,
+  MAX(CASE dataAccessConfig.sdfConfig.sdfConfig.version
+    WHEN 'SDF_VERSION_3_1' THEN 31
+    WHEN 'SDF_VERSION_4' THEN 40
+    WHEN 'SDF_VERSION_4_1' THEN 41
+    WHEN 'SDF_VERSION_4_2' THEN 42
+    WHEN 'SDF_VERSION_5' THEN 50
+    WHEN 'SDF_VERSION_5_1' THEN 51
+    WHEN 'SDF_VERSION_5_2' THEN 52
+    WHEN 'SDF_VERSION_5_3' THEN 53
+    WHEN 'SDF_VERSION_5_4' THEN 54
+    WHEN 'SDF_VERSION_5_5' THEN 55
+    WHEN 'SDF_VERSION_6' THEN 60
+    WHEN 'SDF_VERSION_7' THEN 70
+    WHEN 'SDF_VERSION_7_1' THEN 71
+  END) AS Data_Access_Config_Sdf_Version,
+  COUNT(DISTINCT dataAccessConfig.sdfConfig.sdfConfig.adminEmail) AS Data_Access_Config_Sdf_Admin_Email,
+  COUNT(DISTINCT integrationDetails.integrationCode) AS Integration_Details_Code,
+  COUNT(DISTINCT integrationDetails.details) AS Integration_Details,
+  COUNTIF(servingConfig.exemptTvFromViewabilityTargeting) AS Serving_Config_Exempt_Tv_From_Viewability_Targeting,
+  COUNTIF(prismaEnabled) AS Prisma_Enabled,
+  COUNT(DISTINCT billingConfig.billingProfileId) AS Billing_Config_Profile
+FROM `mapper_dv360.DV360_Advertisers`
+LEFT JOIN (SELECT partnerId, CONCAT(displayName, ' - ', partnerId) AS Partner FROM `mapper_dv360.DV360_Partners`) USING(partnerId)
+WHERE entityStatus != 'ENTITY_STATUS_ARCHIVED'
+GROUP BY 1,2,3,4
+)
+UNPIVOT(Value FOR Attribute IN (Entity_Status_Unspecified, Entity_Status_Active, Entity_Status_Archived, Entity_Status_Draft, Entity_Status_Paused, Entity_Status_Scheduled_For_Deletion, Update_Time_7, Update_Time_30, Update_Time_90, Update_Time_180, Update_Time_365, General_Config_Domain_Url, General_Config_Time_Zone, General_Config_Currency_Code, Ad_Server_Config_Third_Party_Only_Pixel_Order_Reporting_Enabled, Ad_Server_Config_Cm_Hybrid_Account, Ad_Server_Config_Cm_Hybrid_Floodlight, Ad_Server_Config_Cm_Hybrid_Advertisers, Ad_Server_Config_Cm_Hybrid_Syncable_Sites, Ad_Server_Config_Cm_Hybrid_Dv360_To_Data_Sharing_Enabled, Ad_Server_Config_Cm_Hybrid_Dv360_To_Cost_Reporting_Enabled, Ad_Server_Config_Cm_Hybrid_Floodlight_Linking_Authorized, Creative_Config_Ias_Client, Creative_Config_Oba_Compliance_Disabled, Creative_Config_Dynamic_Enabled, Creative_Config_Video_Data_Sharing_Authorized, Data_Access_Config_Sdf_Override_Partner, Data_Access_Config_Sdf_Version, Data_Access_Config_Sdf_Admin_Email, Integration_Details_Code, Integration_Details, Serving_Config_Exempt_Tv_From_Viewability_Targeting, Prisma_Enabled, Billing_Config_Profile))"
+        },
+        "to": {
+          "dataset": "mapper_dv360",
+          "view": "Attributes_Advertisers"
+        }
+      }
+    }
+  ]
+}
