@@ -1,3 +1,21 @@
+###########################################################################
+#
+#  Copyright 2024 Google LLC
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+###########################################################################
+
 import re
 import argparse
 import json
@@ -11,7 +29,7 @@ from bqflow.util.discovery_to_bigquery import Discovery_To_BigQuery
 CAMEL_TO_UNDERSCORE = re.compile(r'([a-z0-9])([A-Z])')
 
 
-def field_name(path):
+def field_name(path: str) -> str:
   exists = set()
   name = []
   words = CAMEL_TO_UNDERSCORE.sub(r'\1_\2', path).lower().replace('.', '_').replace('_id', '').replace('_ids', '').title().split('_')
@@ -22,7 +40,7 @@ def field_name(path):
   return '_'.join(name)
 
 
-def enum_common(enums, delimiter='_'):
+def enum_common(enums: list, delimiter: str = '_') -> str:
   prefix = ''
 
   if len(enums) >= 0:
@@ -40,7 +58,7 @@ def enum_common(enums, delimiter='_'):
   return prefix
 
 
-def flatten_json(data, prefix='', array=''):
+def flatten_json(data: dict, prefix: str = '', array: str = '') -> None:
   paths = []
   arrays = []
 
@@ -95,7 +113,7 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser(
     formatter_class=argparse.RawDescriptionHelpFormatter,
     description=textwrap.dedent("""\
-    - python api.py -api dfareporting -version v4 -function Advertiser --flatten
+    - python flatten.py -api dfareporting -version v4 -function Advertiser
   """))
 
   # get parameters
