@@ -4,6 +4,7 @@
   { "name": "Industries", "type": "STRING", "mode": "NULLABLE" },
   { "name": "Owners", "type": "STRING", "mode": "NULLABLE" },
   { "name": "Platforms", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "URL", "type": "STRING", "mode": "NULLABLE" },
   { "name": "Attribute_1", "type": "STRING", "mode": "NULLABLE" },
   { "name": "Attribute_2", "type": "STRING", "mode": "NULLABLE" },
   { "name": "Attribute_3", "type": "STRING", "mode": "NULLABLE" }

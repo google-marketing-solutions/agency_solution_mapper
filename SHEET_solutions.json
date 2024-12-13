@@ -1,33 +1,32 @@
-{
-  "tasks": [
-    { "dataset": {
-        "description": "Create dataset.",
-        "auth": "service",
-        "dataset": "mapper_dv360"
-    }},
-    { "bigquery":{
-      "description":"Connect solution sheet to table.",
-      "auth":"user",
-      "from":{
-        "sheet":"https://docs.google.com/spreadsheets/d/1vHFu-_mrlRTOcV0f5bulfi1W-FlK6pN2_UeGVctJqfo/",
-        "tab":"Solutions",
-        "range":"A1:H",
-        "header":true
-      },
-      "to":{
-        "dataset":"mapper_dv360",
-        "table":"Solutions",
-        "schema":[
-          { "name": "Solution", "type": "STRING", "mode": "NULLABLE" },
-          { "name": "Description", "type": "STRING", "mode": "NULLABLE" },
-          { "name": "Industries", "type": "STRING", "mode": "NULLABLE" },
-          { "name": "Owners", "type": "STRING", "mode": "NULLABLE" },
-          { "name": "Platforms", "type": "STRING", "mode": "NULLABLE" },
-          { "name": "Attribute_1", "type": "STRING", "mode": "NULLABLE" },
-          { "name": "Attribute_2", "type": "STRING", "mode": "NULLABLE" },
-          { "name": "Attribute_3", "type": "STRING", "mode": "NULLABLE" }
-        ]
-      }
-    }}
-  ]
-}
+{ "tasks": [
+  { "dataset": {
+    "description": "Create dataset.",
+    "auth": "service",
+    "dataset": "DV360_Mapper"
+  }},
+  { "bigquery":{
+    "description":"Connect solution sheet to table.",
+    "auth":"user",
+    "from":{
+      "sheet":"https://docs.google.com/spreadsheets/d/1vHFu-_mrlRTOcV0f5bulfi1W-FlK6pN2_UeGVctJqfo/",
+      "tab":"Solutions",
+      "range":"A1:I",
+      "header":true
+    },
+    "to":{
+      "dataset":"DV360_Mapper",
+      "table":"Solutions",
+      "schema":[
+        { "name": "Solution", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "Description", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "Industries", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "Owners", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "Platforms", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "URL", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "Attribute_1", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "Attribute_2", "type": "STRING", "mode": "NULLABLE" },
+        { "name": "Attribute_3", "type": "STRING", "mode": "NULLABLE" }
+      ]
+    }
+  }}
+]}

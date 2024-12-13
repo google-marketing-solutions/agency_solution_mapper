@@ -1,60 +1,29 @@
-{
-  "tasks": [
-    {
-      "dataset": {
-        "description": "Create the mapper_dv360 dataset.",
-        "auth": "user",
-        "dataset": "mapper_dv360"
+{ "tasks": [
+    { "dataset": {
+      "description": "Create the DV360_Mapper dataset.",
+      "auth": "user",
+      "dataset": "DV360_Mapper"
+    }},
+    { "bigquery": {
+      "description": "Create the Attributes_Score view.",
+      "auth": "user",
+      "from": {
+        "query": "
+          SELECT * FROM `DV360_Mapper.Attributes_Partners`
+          UNION ALL
+          SELECT * FROM `DV360_Mapper.Attributes_Advertisers`
+          UNION ALL
+          SELECT * FROM `DV360_Mapper.Attributes_Campaigns`
+          UNION ALL
+          SELECT * FROM `DV360_Mapper.Attributes_LineItems`
+          UNION ALL
+          SELECT * FROM `DV360_Mapper.Attributes_Creatives` 
+        "
+      },
+      "to": {
+        "dataset": "DV360_Mapper",
+        "view": "Attributes_Score"
       }
-    },
-    {
-      "bigquery": {
-        "description": "Create the Attributes_Score view.",
-        "auth": "user",
-        "from": {
-          "query": "SELECT
-  * EXCEPT(Counter,
-    value, Layer) REPLACE(CONCAT(Layer, ': ', REPLACE(attribute, '_', ' ')) AS Attribute),
-  SAFE_DIVIDE(value, Counter) AS Share,
-  IFNULL(SAFE_DIVIDE(value, (MAX(value) OVER (PARTITION BY Attribute))), 0) AS Ranking,
-FROM (
-  SELECT
-    'Partner' AS Layer,
-    *
-  FROM
-    `mapper_dv360.Attributes_Partners`
-  UNION ALL
-  SELECT
-    'Advertiser' AS Layer,
-    *
-  FROM
-    `mapper_dv360.Attributes_Advertisers`
-  UNION ALL
-  SELECT
-    'Campaign' AS Layer,
-    *
-  FROM
-    `mapper_dv360.Attributes_Campaigns`
-  UNION ALL
-  SELECT
-    'LineItem' AS Layer,
-    *
-  FROM
-    `mapper_dv360.Attributes_LineItems`
-  UNION ALL
-  SELECT
-    'Creative' AS Layer,
-    *
-  FROM
-    `mapper_dv360.Attributes_Creatives` )
-ORDER BY
-  RANKING DESC"
-        },
-        "to": {
-          "dataset": "mapper_dv360",
-          "view": "Attributes_Score"
-        }
-      }
-    }
+    }}
   ]
 }

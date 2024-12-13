@@ -1,68 +1,65 @@
-{
-  "tasks": [
-    { "dataset": {
-        "description": "Create dataset.",
-        "auth": "service",
-        "dataset": "mapper_dv360"
-      }
-    },
-    { "dv_report": {
-      "description": "Create Spend Report",
-      "auth": "service",
-      "report": {
-        "filters": {
-          "FILTER_PARTNER": {
-            "bigquery":{
-              "query":"SELECT partnerId FROM mapper_dv360.DV360_Partners",
-              "dataset": "mapper_dv360"
-            }
-          }
-        },
-        "body": {
-          "metadata": {
-            "title": "Pacing Dashboard Report",
-            "dataRange": {
-              "range": "LAST_30_DAYS"
-            },
-            "format": "CSV"
-          },
-          "params": {
-            "type": "STANDARD",
-            "filters": [],
-            "groupBys": [
-              "FILTER_ADVERTISER_CURRENCY",
-              "FILTER_ADVERTISER",
-              "FILTER_MEDIA_PLAN",
-              "FILTER_INSERTION_ORDER",
-              "FILTER_LINE_ITEM"
-            ],
-            "metrics": [
-              "METRIC_BILLABLE_IMPRESSIONS",
-              "METRIC_TOTAL_MEDIA_COST_ADVERTISER"
-            ],
-            "options": {
-              "includeOnlyTargetedUserLists": false
-            }
+{ "tasks": [
+  { "dataset": {
+    "description": "Create dataset.",
+    "auth": "service",
+    "dataset": "DV360_Mapper"
+  }},
+  { "dv_report": {
+    "description": "Create Spend Report",
+    "auth": "service",
+    "report": {
+      "filters": {
+        "FILTER_PARTNER": {
+          "bigquery":{
+            "query":"SELECT partnerId FROM DV360_Mapper.DV360_Partners",
+            "dataset": "DV360_Mapper"
           }
         }
       },
-      "out":{
-        "bigquery":{
-          "auth":"service",
-          "dataset":"mapper_dv360",
-          "table":"DV360_Spend",
-          "header":true,
-          "schema":[
-            { "name": "Advertiser_Currency", "type": "STRING" },
-            { "name": "Advertiser_Id", "type": "INTEGER" },
-            { "name": "Campaign_Id", "type": "INTEGER" },
-            { "name": "InsertionOrder_Id", "type": "INTEGER" },
-            { "name": "LineItem_Id", "type": "INTEGER" },
-            { "name": "Billable_Impressions", "type": "FLOAT" },
-            { "name": "Total_Media_Cost_Advertiser_Currency", "type": "FLOAT" }
-          ]
+      "body": {
+        "metadata": {
+          "title": "Pacing Dashboard Report",
+          "dataRange": {
+            "range": "LAST_30_DAYS"
+          },
+          "format": "CSV"
+        },
+        "params": {
+          "type": "STANDARD",
+          "filters": [],
+          "groupBys": [
+            "FILTER_ADVERTISER_CURRENCY",
+            "FILTER_ADVERTISER",
+            "FILTER_MEDIA_PLAN",
+            "FILTER_INSERTION_ORDER",
+            "FILTER_LINE_ITEM"
+          ],
+          "metrics": [
+            "METRIC_BILLABLE_IMPRESSIONS",
+            "METRIC_TOTAL_MEDIA_COST_ADVERTISER"
+          ],
+          "options": {
+            "includeOnlyTargetedUserLists": false
+          }
         }
       }
-    }}
-  ]
-}
+    },
+    "out":{
+      "bigquery":{
+        "auth":"service",
+        "dataset":"DV360_Mapper",
+        "table":"DV360_Spend",
+        "header":true,
+        "schema":[
+          { "name": "Advertiser_Currency", "type": "STRING" },
+          { "name": "Advertiser_Id", "type": "INTEGER" },
+          { "name": "Campaign_Id", "type": "INTEGER" },
+          { "name": "InsertionOrder_Id", "type": "INTEGER" },
+          { "name": "LineItem_Id", "type": "INTEGER" },
+          { "name": "Billable_Impressions", "type": "FLOAT" },
+          { "name": "Total_Media_Cost_Advertiser_Currency", "type": "FLOAT" }
+        ]
+      }
+    }
+  }}
+]}

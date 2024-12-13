@@ -1,29 +1,24 @@
-{
-  "tasks": [
-    {
-      "dataset": {
-        "description": "Create the mapper_dv360 dataset.",
-        "auth": "user",
-        "dataset": "mapper_dv360"
-      }
+{ "tasks": [
+  { "dataset": {
+    "description": "Create the DV360_Mapper dataset.",
+    "auth": "user",
+    "dataset": "DV360_Mapper"
+  }},
+  { "bigquery": {
+    "description": "Create the Attributes_Lookup view.",
+    "auth": "user",
+    "from": {
+      "query": "
+        SELECT 
+          DISTINCT CONCAT(Layer, ': ', Attribute, Signal) AS Attribute
+        FROM `DV360_Mapper.Attributes_Score`
+        CROSS JOIN UNNEST([' - LOW', ' - MEDIUM', ' - HIGH']) AS Signal
+        ORDER BY Attribute
+      "
     },
-    {
-      "bigquery": {
-        "description": "Create the Attributes_Lookup view.",
-        "auth": "user",
-        "from": {
-          "query": "SELECT 
-  DISTINCT CONCAT(Attribute, Method, Signal) AS Attribute
-FROM `mapper_dv360.Attributes_Score`
-CROSS JOIN UNNEST([' - RANK', ' - SHARE']) AS Method
-CROSS JOIN UNNEST([' - LOW', ' - MEDIUM', ' - HIGH']) AS Signal
-ORDER BY Attribute"
-        },
-        "to": {
-          "dataset": "mapper_dv360",
-          "view": "Attributes_Lookup"
-        }
-      }
+    "to": {
+      "dataset": "DV360_Mapper",
+      "view": "Attributes_Lookup"
     }
-  ]
-}
+  }}
+]}

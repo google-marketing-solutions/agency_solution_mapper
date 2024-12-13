@@ -1,424 +1,783 @@
-[{
-  "Solution": "ABCD Assessment Tool (Video)",
-  "Description": "Automatically assessing YouTube video ads for fundamental digital basics",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "elizabethj@google.com, lifantis@google.com, lloydsharma@google.com, tanil@google.com, wito@google.com",
-  "Platforms": "Google Ads - Video (Auction),GMP - DV360",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": "LineItem: Line Item Type Video Default - HIGH"
-}, {
-  "Solution": "ABCD Assessment Tool (YouTube)",
-  "Description": "Automatically assessing YouTube video ads for fundamental digital basics",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "elizabethj@google.com, lifantis@google.com, lloydsharma@google.com, tanil@google.com, wito@google.com",
-  "Platforms": "Google Ads - Display,Google Ads - Video (Auction),GMP - DV360",
-  "Attribute_1": "LineItem: Line Item Type Youtube And Partners Action - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "AdClip",
-  "Description": "Advanced Video creative clipping for multiformat campaigns",
-  "Industries": "Publishers",
-  "Owners": "gvarelal@google.com, tmelachos@google.com",
-  "Platforms": "Google AdManager 360 - Display",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": "LineItem: Line Item Type Video Default - HIGH"
-}, {
-  "Solution": "ADH Youtube Closed Loop Measurement",
-  "Description": "Tailored insights for a provided client around incremental conversions on Youtube",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "danielduela@google.com, deepesh@google.com, jonturnbull@google.com",
-  "Platforms": "Google Ads - mSites / mUX",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Youtube And Partners Settings Inventory Source Include Google Tv - HIGH",
-  "Attribute_3": "LineItem: Youtube And Partners Settings Content Category Expanded - HIGH"
-}, {
-  "Solution": "ADH YouTube CTV Reach Analysis",
-  "Description": "Tailored insights on reach and performance on YouTube CTV",
-  "Industries": "Exchange Platforms",
-  "Owners": "astivi@google.com, esilvey@google.com, jessiefeng@google.com",
-  "Platforms": "Open Bidding",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "AI Advatars",
-  "Description": null,
-  "Industries": "Retail",
-  "Owners": "bseoane@google.com, claireg@google.com, flohregile@google.com, jingjunong@google.com, jneto@google.com, jward@google.com, lushu@google.com, mimr@google.com, mrmts@google.com, vmichon@google.com",
-  "Platforms": "Merchant Center,Google Ads - Shopping",
-  "Attribute_1": "Campaign: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": "LineItem: Targeting Expansion Enable Optimized - HIGH"
-}, {
-  "Solution": "AI Innovation",
-  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
-  "Industries": null,
-  "Owners": null,
-  "Platforms": null,
-  "Attribute_1": "LineItem: Creatives - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
-}, {
-  "Solution": "Census Targeting Kit (BQFlow)",
-  "Description": "Analyze impressions, clicks, and conversaions relative to the US census 200+ dimensions.",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto,Publishers",
-  "Owners": "archival@google.com, artmangabeira@google.com, irischeng@google.com, rclaret@google.com",
-  "Platforms": "Measurement \u0026 Attribution",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
-  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
-}, {
-  "Solution": "CM360 Creative AI Kit (BQFlow)",
-  "Description": "Creative Vision AI analysis for CM360.",
-  "Industries": "Exchange Platforms",
-  "Owners": "esilvey@google.com, nicolecarr@google.com, sccarthy@google.com",
-  "Platforms": "Open Bidding,Authorized Buyers",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": "LineItem: Creatives - HIGH"
-}, {
-  "Solution": "CM360 Data Warehouse (BQFlow)",
-  "Description": null,
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Finance,Tech,Retail,Auto",
-  "Owners": "hupili@google.com, jasminetong@google.com",
-  "Platforms": "Google Ads - Display,Google Ads - Video (Auction),YouTube",
-  "Attribute_1": "LineItem: Creatives - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "CM360 Reporting (BQFlow)",
-  "Description": null,
-  "Industries": "Publishers",
-  "Owners": "lizhangkathy@google.com, noahfeder@google.com",
-  "Platforms": "Google AdManager 360 - DAI (Dynamic Ad insertion),Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager - Video",
-  "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": "LineItem: Targeting Expansion Enable Optimized - HIGH"
-}, {
-  "Solution": "CM360 User Audit",
-  "Description": "Scaled user management in CM360 via either A) Google Sheets or B) BigQuery/Data Studio",
-  "Industries": "Publishers",
-  "Owners": "lizhangkathy@google.com, noahfeder@google.com",
-  "Platforms": "Google AdManager 360 - DAI (Dynamic Ad insertion),Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager - Video",
-  "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Create \u0026 Convert Your Social Demand",
-  "Description": null,
-  "Industries": "Retail",
-  "Owners": "courtneycasey@google.com, ecantor@google.com",
-  "Platforms": "Merchant Center,Google Ads - Shopping",
-  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
-  "Attribute_2": "LineItem: Youtube And Partners Settings Content Category Expanded - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Creative",
-  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
-  "Industries": "Media \u0026 Entertainment",
-  "Owners": "sandhyas@google.com, shreyamurali@google.com",
-  "Platforms": "Google Ads - Search",
-  "Attribute_1": "LineItem: Creatives - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Creative Performance Analysis Tool",
-  "Description": "Dashboard that integrates global Google Ads data to provide top creatives per app genre and benchmark in different markets",
-  "Industries": "Publishers",
-  "Owners": "alak@google.com, sandyquick@google.com",
-  "Platforms": "Google AdManager - Mobile Apps",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": "LineItem: Creatives - HIGH"
-}, {
-  "Solution": "CTV Measurement Consultation",
-  "Description": "Understand the challenges of buying and measuring connected TV through Google platforms and help advertisers structure their CTV tests with measurement in mind.",
-  "Industries": "Travel,Tech,Retail",
-  "Owners": "chii@google.com, chjerry@google.com, dongmao@google.com, effyli@google.com, qkyang@google.com, yunruoliang@google.com",
-  "Platforms": "Google Cloud - Other GCP,Google Ads - Search",
-  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
-  "Attribute_2": "Advertiser: Entity Status Active - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "CTV Publisher Volume Kit (BQFlow)",
-  "Description": "Analyze publisher volume across all campaigns in DV360.",
-  "Industries": "Publishers",
-  "Owners": "alexdurcho@google.com, gvarelal@google.com, jenmargono@google.com",
-  "Platforms": "Google AdManager - Display,Google AdManager - Mobile Apps,Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager 360 - Display,Google AdManager - Video,Google AdManager 360 - Mobile Apps",
-  "Attribute_1": "LineItem: Line Item Type Video Over The Top - HIGH",
-  "Attribute_2": "LineItem: Youtube And Partners Settings Inventory Source Include - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Drive Profitable Growth",
-  "Description": null,
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "juliakudr@google.com, lloydsharma@google.com, pfeneht@google.com, sampowel@google.com",
-  "Platforms": "Google Ads - Video (Auction)",
-  "Attribute_1": "LineItem: Entity Status Active - MEDIUM",
-  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "DV360 Creative Dashboard Kit (BQFlow)",
-  "Description": "Creative intelligence dashboard for DV360.",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "robertmcmahan@google.com, tommcfarlin@google.com",
-  "Platforms": "Google Cloud - Other GCP,Google Cloud - Big Query,Measurement \u0026 Attribution",
-  "Attribute_1": "LineItem: Creatives - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "DV360 Custom Bidding Workshop (including CTV focus)",
-  "Description": "Consultation / Workshop to help clients activate Custom Bidding in DV360.",
-  "Industries": "Publishers",
-  "Owners": "isolomin@google.com, tsho@google.com",
-  "Platforms": "Google AdManager - Display",
-  "Attribute_1": "LineItem: Bid Strategy Performance Goal Auto Type Bidding Custom Algo - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "DV360 Data Warehouse (BQFlow)",
-  "Description": null,
-  "Industries": "Retail",
-  "Owners": "atomas@google.com, ezuchovicki@google.com, nunezarmando@google.com, reyesenzo@google.com",
-  "Platforms": "Google Cloud - Other GCP,GMP - Studio,Google Cloud - Big Query,GMP - DV360",
-  "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": "LineItem: Bid Strategy Maximize Spend Auto Custom Bidding Algorithm - HIGH"
-}, {
-  "Solution": "DV360 LineItem To Creative Append Kit (BQFlow)",
-  "Description": "Automatically assigns creatives to line items based on naming convention.",
-  "Industries": "Publishers",
-  "Owners": "rivenchu@google.com",
-  "Platforms": "null",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH"
-}, {
-  "Solution": "DV360 Maturity Targeting Kit (BQFlow)",
-  "Description": "Checks if adverrtiser level brand safety settings are set in DV360.",
-  "Industries": "Publishers",
-  "Owners": "rivenchu@google.com, shanq@google.com",
-  "Platforms": "Google AdManager - Mobile Apps,AdMob",
-  "Attribute_1": "LineItem: Youtube And Partners Settings Inventory Source Include - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "DV360 Pacing Kit (BQFlow)",
-  "Description": "Analyzes pacing across Campaign/IO/LI and flags outliers in a dashboard.",
-  "Industries": "Retail",
-  "Owners": "akort@google.com, rihito@google.com, sebyoshii@google.com",
-  "Platforms": "Google Ads - Shopping",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Bid Strategy Maximize Spend Auto Custom Bidding Algorithm - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "DV360 Reporting (BQFlow)",
-  "Description": null,
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "irischeng@google.com, lushu@google.com",
-  "Platforms": "Analytics Suite,Campaign Manager,SA360,Measurement \u0026 Attribution,Google Ads - Shopping,Google Ads - Search",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "DV360 User Audit",
-  "Description": "Scaled user management in DV360 via either A) Google Sheets or B) BigQuery/Data Studio\n",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "archival@google.com, bseoane@google.com, dematos@google.com, flohregile@google.com, juhisahai@google.com, nielsoverwijn@google.com",
-  "Platforms": "Analytics Suite,Measurement \u0026 Attribution",
-  "Attribute_1": "Advertiser: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Enable Your Video Up Front Strategy",
-  "Description": null,
-  "Industries": "Media \u0026 Entertainment,Pharma \u0026 Healthcare,Apps,Agencies \u0026 Partners,Government \u0026 Advocacy",
-  "Owners": "eladb@google.com",
-  "Platforms": "Google Ads - Search",
-  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
-  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
-  "Attribute_3": "LineItem: Entity Status Active - HIGH"
-}, {
-  "Solution": "Geo Branding Kit",
-  "Description": "Analyze impressions, clicks, and conversions relative to points of interest. Also shows landmarks correlated with performance.",
-  "Industries": "Publishers",
-  "Owners": "gijtenbeek@google.com, mazetti@google.com",
-  "Platforms": "null",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Grow Your Awareness \u0026 Consideration",
-  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
-  "Industries": "Agencies \u0026 Partners",
-  "Owners": "kaano@google.com, nicolasoren@google.com, oriolm@google.com",
-  "Platforms": "Google Ads - mApps,Google Ads - mSites / mUX",
-  "Attribute_1": "Campaign: Campaign Goal Type Online Action - HIGH",
-  "Attribute_2": "Advertiser: Update Time 180 - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Margin Protection-CM",
-  "Description": "Alerts on common user errors with disproportionate impact on margins",
-  "Industries": "Agencies \u0026 Partners,Retail",
-  "Owners": "johnstafford@google.com, jtmugere@google.com, umakantodutta@google.com",
-  "Platforms": "Google Cloud - Other GCP,Google Cloud - Big Query,Merchant Center,Google Ads - Shopping",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Dv360 To Cost Reporting Enabled - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Margin Protection-DV",
-  "Description": "Alerts on common user errors with disproportionate impact on margins",
-  "Industries": "Publishers",
-  "Owners": "jayweezhang@google.com, tennichi@google.com",
-  "Platforms": "AdMob",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
-  "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH"
-}, {
-  "Solution": "Maximize Your Sales",
-  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
-  "Industries": "Retail",
-  "Owners": "blakegoodwin@google.com",
-  "Platforms": "Merchant Center,Google Ads - Shopping",
-  "Attribute_1": "LineItem: Entity Status Active - MEDIUM",
-  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - LOW",
-  "Attribute_3": "LineItem: Budget Max Amount - HIGH"
-}, {
-  "Solution": "Measurment \u0026 Analytics",
-  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
-  "Industries": "Publishers",
-  "Owners": "kanata@google.com",
-  "Platforms": "Google AdManager - Display,AdSense for Content,Google AdManager 360 - Display",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Media Activation \u0026 Optimization",
-  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
-  "Industries": "Media \u0026 Entertainment",
-  "Owners": "daveshb@google.com, jstocklin@google.com",
-  "Platforms": "Google Ads - Search",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
-}, {
-  "Solution": "Megalista",
-  "Description": "Efficient way to ingest data into Google\u0027s Advertising Platforms",
-  "Industries": "Travel",
-  "Owners": "jamesoconnor@google.com",
-  "Platforms": "Google Flights and Travel products",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Budget Max Amount - HIGH",
-  "Attribute_3": "LineItem: Targeting Expansion Audience Level Least Reach - MEDIUM"
-}, {
-  "Solution": "ML-Propensity Bidder",
-  "Description": "Custom Bidding made easy through ML",
-  "Industries": "Exchange Platforms",
-  "Owners": "alyssarey@google.com, cindygao@google.com",
-  "Platforms": "Open Bidding,Authorized Buyers",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Targeting Expansion Enable Optimized - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Operational Efficiency",
-  "Description": "Agency AI Tiger Team: Cloud+Ads 10/10 Collaboration Session | go/agencyAIworkshop",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "chii@google.com, chyt@google.com, guyi@google.com, sicongchen@google.com",
-  "Platforms": "Merchant Center,Google Ads - Shopping,Google Ads - mApps,Google Ads - Search",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": "LineItem: Creatives - HIGH"
-}, {
-  "Solution": "Power Your AI",
-  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "buhuang@google.com, lushu@google.com",
-  "Platforms": "GMP - DV360",
-  "Attribute_1": "LineItem: Creatives - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": "LineItem: Bid Strategy Fixed Amount Micros - HIGH"
-}, {
-  "Solution": "QR Code for CTV",
-  "Description": "Improve attribution measurement in the fragemented CTV space",
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "chjerry@google.com, ektakahashi@google.com, ellenmezera@google.com, gorock@google.com, rtachibana@google.com, yiruo@google.com",
-  "Platforms": "YouTube Reserve,Google Ads - Video (Auction),GMP - DV360,Measurement \u0026 Attribution,Google Ads - Shopping,YouTube,Google Ads - mApps,YouTube - Premieres,Google Ads - Search",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Line Item Type Youtube And Partners Simple Over The Top - HIGH",
-  "Attribute_3": "LineItem: Line Item Type Youtube And Partners View - LOW"
-}, {
-  "Solution": "RBA Optimizer",
-  "Description": "Durable Attribution through Regression",
-  "Industries": "Exchange Platforms",
-  "Owners": "esilvey@google.com",
-  "Platforms": "Authorized Buyers",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Bid Strategy Fixed Amount Micros - HIGH",
-  "Attribute_3": "LineItem: Budget Max Amount - HIGH"
-}, {
-  "Solution": "Revenue Generating Capability",
-  "Description": "2024 Strategy gPS Eco Team (go/eco-24-strategy)",
-  "Industries": "Media \u0026 Entertainment,Travel,CPG,Apps,Agencies \u0026 Partners,Retail,Auto",
-  "Owners": "mfekry@google.com",
-  "Platforms": "Analytics Suite,Campaign Manager,Google Cloud - Other GCP,Google Ads - Display,SA360,Google Cloud - Big Query,GMP - DV360,Google Ads - Search",
-  "Attribute_1": "LineItem: Entity Status Active - MEDIUM",
-  "Attribute_2": "LineItem: Bid Strategy Performance Goal Auto Type Bidding Custom Algo - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Shape Shifters (BQFlow)",
-  "Description": null,
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Apps,Finance,Agencies \u0026 Partners,Tech,Retail,Auto",
-  "Owners": "dnachbar@google.com, omrigoldstein@google.com",
-  "Platforms": "Google Ads - Display,Google Ads - Video (Auction),Google Cloud - Big Query,Google Ads - Shopping,Google Ads - mApps,Google Ads - Search,Google Ads - mSites / mUX",
-  "Attribute_1": "LineItem: Creatives - HIGH",
-  "Attribute_2": "LineItem: Creatives - HIGH",
-  "Attribute_3": "LineItem: Targeting Expansion Enable Optimized - HIGH"
-}, {
-  "Solution": "Unlock Full Value Of Web + App",
-  "Description": null,
-  "Industries": "Media \u0026 Entertainment,Travel,Pharma \u0026 Healthcare,CPG,Finance,Agencies \u0026 Partners,Government \u0026 Advocacy,Tech,Retail,Auto",
-  "Owners": "fjune@google.com, mnaka@google.com, nrihos@google.com, taisukek@google.com",
-  "Platforms": "Measurement \u0026 Attribution,Google Ads - Search",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "Campaign: Campaign Goal Type App Install - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Unlock Your Video On DV360",
-  "Description": null,
-  "Industries": "Publishers",
-  "Owners": "nathnunes@google.com, rheck@google.com, tmelachos@google.com, willhessel@google.com, wurman@google.com",
-  "Platforms": "Google AdManager 360 - Video",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": null
-}, {
-  "Solution": "Weather Targeting Kit (BQFlow)",
-  "Description": null,
-  "Industries": "Exchange Platforms",
-  "Owners": "nicolecarr@google.com",
-  "Platforms": "Open Bidding",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Bid Strategy Maximize Spend Auto Custom Bidding Algorithm - HIGH",
-  "Attribute_3": "LineItem: Bid Strategy Performance Goal Auto Custom Bidding Algorithm - HIGH"
-}, {
-  "Solution": "Web \u0026 App UX Consultation",
-  "Description": "Server provided by gPS, User Experience audit to improve mobile site engagement, identify user drop-off points, and kickstart or improve a customer’s AB Testing program.",
-  "Industries": "Travel",
-  "Owners": "bengauss@google.com, miamiosotis@google.com",
-  "Platforms": "Google Flights and Travel products",
-  "Attribute_1": "LineItem: Entity Status Active - HIGH",
-  "Attribute_2": "LineItem: Entity Status Active - HIGH",
-  "Attribute_3": "Advertiser: Entity Status Active - HIGH"
-}, {
-  "Solution": "YouTube Sentiment Analysis",
-  "Description": "Perform sentiment analysis on YouTube comment data for a given YouTube Video ID",
-  "Industries": "Publishers",
-  "Owners": "dconca@google.com, massarellim@google.com",
-  "Platforms": "Google AdManager - Display,Google AdManager 360 - DAI (Dynamic Ad insertion),Google AdManager - Mobile Apps,Google AdManager 360 - Video,Google AdManager 360 - Audio,Google AdManager 360 - Display,Google AdManager - Video,Google AdManager 360 - Mobile Apps",
-  "Attribute_1": "LineItem: Line Item Type Video Default - HIGH",
-  "Attribute_2": "LineItem: Line Item Type Youtube And Partners Action - HIGH",
-  "Attribute_3": null
-}]
+[
+  {
+    "Solution": "sGTM Pantheon - VBB Activator (Soteria) ",
+    "Description": "A first of its kind, this Focus Solution allows a client to use server-side Google Tag Manager (sGTM) to assign actual [real/true] profit values to conversion events. It lets advertisers keep their sensitive information private, avoid pseudo values and take full advantage of Google's conversion modeling.\n\nIf users wish to demo the solution with clients or if they want to learn more about this solution and other sGTM solutions, they can use the following links:\n\ngo/sgtm-pantheon-instructions go/sgtm-pantheon-demo",
+    "URL": "https://github.com/google-marketing-solutions/gps_soteria",
+    "Owners": "bseoane,flohregile,irischeng,juhisahai,miguelfc,mkaustubh,nielsoverwijn,tsymonds",
+    "Platforms": "Google Ads - Shopping,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Google Ads - PMax,Google Ads - DemandGen",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Floodlight - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Floodlight Linking Authorized - HIGH"
+  },
+  {
+    "Solution": "Connected TV (CTV) Measurement Consultation",
+    "Description": "Understand the challenges of buying and measuring connected TV through Google platforms and help advertisers structure their CTV tests with measurement in mind.",
+    "URL": "",
+    "Owners": "bretthoward,dgletts,jacobcarlson",
+    "Platforms": "GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Line_Item_Type_Video_Over_The_Top - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Google_Tv - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Viewability_Vendor_Integral_Ad_Science - HIGH"
+  },
+  {
+    "Solution": "CTV Reach Measurement Framework via Campaign Manager 360",
+    "Description": "Campaign Manager 360 provides a powerful reporting suite for connected TV campaigns, however reach measurement can be cumbersome due the many data aggregation rules. This solution provides a trafficking and reporting framework to make sure advertisers can report on the most common reach metrics, including the most advanced ones (i.e. reach overlap, exclusive reach) across different publishers. Thanks to the Campaign Manager 360 cross device capabilities, advertisers can also use the solution to easily understand incremental CTV metrics vs. every other media type (i.e. how many incremental users have been reached by CTV vs. online video)",
+    "URL": "",
+    "Owners": "mfantin",
+    "Platforms": "Measurement & Attribution,GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Agencies & Partners,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Dv360 To Data Sharing Enabled - HIGH",
+    "Attribute_2": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Floodlight - HIGH"
+  },
+  {
+    "Solution": "DV360 User Audit",
+    "Description": "The DV360 User Audit allows for scaled user management in DV360 via either A) Google Sheets or B) BigQuery/Data Studio, by leveraging Cloud Functions in Google Cloud.\n",
+    "URL": "",
+    "Owners": "anaesqueda,zachtevnan",
+    "Platforms": "GMP - DV360",
+    "Industries": "Agencies & Partners",
+    "Attribute_1": "Partner: Entity_Status_Active - HIGH",
+    "Attribute_2": "Partner: Data_Access_Config_Sdf_Admin_Email - HIGH",
+    "Attribute_3": "Partner: Data_Access_Config_Sdf_Version - HIGH"
+  },
+  {
+    "Solution": "Dynamic Campaign Strategy Consultation",
+    "Description": "Design and support the implementation of a dynamic strategy using the GMP Display platforms and their available features.",
+    "URL": "",
+    "Owners": "guimarques",
+    "Platforms": "GMP - Studio,GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "Campaign: Campaign_Goal_Type_Brand_Awareness - HIGH",
+    "Attribute_3": "LineItem: Targeting_Expansion_Enable_Optimized - HIGH"
+  },
+  {
+    "Solution": "ImageMix - Display Creative Generation",
+    "Description": "ImageMix helps you generate display creatives that can be used in your Google Display Network and P-max campaigns for example. This external friendly and self service tool makes it possible for advertisers to start display campaigns with existing product images and logos in a short period of time just by editing templates on spreadsheet and running scripts on Colaboratory. ",
+    "URL": "",
+    "Owners": "amorgens,myosuke,rihito",
+    "Platforms": "Google Ads - Display,GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Agencies & Partners,Tech,CPG,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "LineItem: Creatives - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Display_Default - HIGH"
+  },
+  {
+    "Solution": "Value-based Bidding",
+    "Description": "Target highest-value users with Value-based Bidding",
+    "URL": "",
+    "Owners": "agreenfield,benhoward,lloydsharma,misok",
+    "Platforms": "GMP - Studio,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Bid_Strategy_Youtube_And_Partners_Type_Bidding_Maximize_Conversion_Value - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Performance_Goal_Type_Bidding_Custom_Algo - HIGH",
+    "Attribute_3": "LineItem: Bid_Strategy_Performance_Goal_Auto_Type_Bidding_Custom_Algo - HIGH"
+  },
+  {
+    "Solution": "Custom Bidding Script Builder",
+    "Description": "A Sheets-based solution that converts user inputs into a usable DV360 Custom Bidding script.  ",
+    "URL": "",
+    "Owners": "brynhastings,psnel",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Bid_Strategy_Performance_Goal_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_3": "LineItem: Bid_Strategy_Youtube_And_Partners_Ad_Group_Effective_Target_Cpa_Source_Bidding - HIGH"
+  },
+  {
+    "Solution": "Privacy & Data Durability Toolkit",
+    "Description": "An automated toolkit to provide tailored insights for provided customer or platform account IDs. The information from the packaged privacy data audit can be used to populate a measurement & privacy related deck, providing clients a status on durability across data collection, measurement and activation strategy. Data sources include various internal dashboards that provides insights for both AMER and APAC toolkit templates.\n\n",
+    "URL": "",
+    "Owners": "anishadesai,joeryan",
+    "Platforms": "GMP - Studio,SA360,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Data_Access_Config_Sdf_Admin_Email - HIGH",
+    "Attribute_2": "Partner: Data_Access_Config_Sdf_Version - HIGH",
+    "Attribute_3": "Advertiser: Data Access Config Sdf Admin Email - HIGH"
+  },
+  {
+    "Solution": "YouTube Bulk ABCD Assessment",
+    "Description": "The YouTube Bulk-ABCD assessment tool uses AI to analyze hundreds of video ads, providing insights to improve future campaigns.\n\n",
+    "URL": "https://github.com/google-marketing-solutions/abcds-detector",
+    "Owners": "bseoane,flohregile,tanil",
+    "Platforms": "YouTube Reserve,YouTube,GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Video - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Content_Category_Standard - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Youtube_And_Partners_Reach - HIGH"
+  },
+  {
+    "Solution": "DV360: Streamlining Reach Insights Across Media Buys",
+    "Description": "Unifying media buys across platforms by leveraging DV360.\nTo analyze a client's advertising reach data within DV360. It focuses on metrics such as unique reach, audience reach, added reach, reach by frequency, and reach overlap. This analysis is then automatically compiled into a presentation-ready slide deck",
+    "URL": "",
+    "Owners": "conorjohnston",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "LineItem: Targeting_Expansion_Enable_Optimized - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include - HIGH"
+  },
+  {
+    "Solution": "Future Customer Value Segments (FoCVS): Customer Lifetime Value (CLV) prediction and segmentation pipeline (on/off Google Cloud)",
+    "Description": "Taking advantage of CLV insights will increase marketing efficiency through better targeting (via Remarketing Lists) and more informed bidding (via Conversion Value Rules).\n\nFoCVS uses well-established probabilistic models for calculating and predicting customer lifetime value (pCLV). It allows clients to use their own (1P) transactional data to identify the most valuable clients for a customer centric marketing strategy. Since customers don't have to share their 1P data, it's privacy-friendly and relatively easy and quick to implement. The pipeline can be set up and running in around 15 minutes.\n\nMain use cases: \n- Focus on simplicity / efficiency; FoCVS is a cheap, quick & easy-to-use way to start implementing a CLV-optimized marketing strategy.\n- Focus on privacy; input data does not need to be shared with Google or any other company.\n- Focus on flexibility; users can run the pipeline as many times as they want, using different input data or different parameters, on Google Cloud or on-prem\n\nLimitations: \n- Probabilistic models look at a specific snapshot in time and do not incorporate a \"learning effect\" as with ML solutions.\n- CLV of new customers (purchase propensity) can\u2019t be predicted at all, CLV of one-time buyers can be predicted (but rather poorly in comparison to ML solutions).\n- FoCVS does not use custom 1P data features for CLV predictions, rather only for segmentation (i.e. creating audience lists). If the data activation strategy aims to use direct conversion manipulation (e.g. through the Offline Conversion Import or Conversion Adjustments functionality), then ML solutions are more suited.\n",
+    "URL": "",
+    "Owners": "mfekry",
+    "Platforms": "Google Cloud - Big Query,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Cloud - Other GCP",
+    "Industries": "Media & Entertainment,Apps,Agencies & Partners,CPG,Travel,Auto,Retail",
+    "Attribute_1": "Advertiser: Data Access Config Sdf Version - HIGH",
+    "Attribute_2": "Advertiser: General Config Currency Code - HIGH",
+    "Attribute_3": "LineItem: Conversion_Counting_Floodlight_Activity_Configs - HIGH"
+  },
+  {
+    "Solution": "[Margin Protection] Performance Monitor",
+    "Description": "An executive dashboard that helps visualize Launch Monitor implementations across an organization for management to understand error frequency and ensure margins remain protected. This is one of two parts of the Margin Protection offering, and requires Launch Monitor to implement.",
+    "URL": "https://github.com/google-marketing-solutions/margin-protection",
+    "Owners": "anaesqueda,equevedo,kenjora,seancjones,tbrethauer",
+    "Platforms": "SA360,GMP - DV360,Campaign Manager",
+    "Industries": "Agencies & Partners",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Cost_Reporting_Enabled - HIGH",
+    "Attribute_2": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_3": "LineItem: Partner_Costs_Cost_Type_Dv360_Fee - HIGH"
+  },
+  {
+    "Solution": "Share of Search",
+    "Description": "This solution calculates the country-level \"Share of Search\" which is the ratio between the number of searches for the client's own brands or products and the number of searches for all related brands or products. This helps them to identify spots where they can improve brand awareness.\nFor this, the client needs to define its own list of search terms to reflect their own brands or products as well as their competitors'. The search volume will be retrieved from the publicly available Google Ads Keyword Planner API.",
+    "URL": "",
+    "Owners": "michaelweiler,uenke,vsp",
+    "Platforms": "Google Ads - Shopping,GMP - Studio,Google Ads - mApps,Google Ads - mSites / mUX,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare",
+    "Attribute_1": "Partner: Exchange_Config_Enabled_Exchanges_Google_Ad_Manager",
+    "Attribute_2": "Partner: Exchange_Config_Enabled_Exchanges_Google_Ad_Manager_Buyer_Network",
+    "Attribute_3": "LineItem: Line_Item_Type_Youtube_And_Partners_Search"
+  },
+  {
+    "Solution": "DV360 Custom Bidding Consulting Guide Stage 2: Implementation",
+    "Description": "An actionable guide with everything you need to build a tailored Custom Bidding engagement for your client.\n\nWelcome to Stage 2, a comprehensive guide to delivering your consultation.\n\nFor Stage 1, visit [Planning & Discovery](https://partnerdash.google.com/apps/onehub/solutions/2r4moe7a1gabo/preview), the essential guide to implementing Custom Bidding for your client.\n\nAnd for Stage 3, visit [Testing & Reporting](https://partnerdash.google.com/apps/onehub/solutions/3tqn3o0akeumg/preview) provides testing guidance, along with how to pull and interpret reports.",
+    "URL": "",
+    "Owners": "brynhastings,flohregile,tanil",
+    "Platforms": "GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Agencies & Partners,Tech,CPG,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Performance_Goal_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Advertisers - HIGH"
+  },
+  {
+    "Solution": "Travel VBB",
+    "Description": "Turn your travel data into bookings. Analyse the nuances of travel client business goals and offer on point consultations to execute the most effective deployment plans. ",
+    "URL": "",
+    "Owners": "ctorterolo,flohregile,ievak,ryanmcdaniel,willwatts",
+    "Platforms": "Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Campaign Manager",
+    "Industries": "Agencies & Partners,Travel",
+    "Attribute_1": "LineItem: Line_Item_Type_Youtube_And_Partners_Reach - HIGH",
+    "Attribute_2": "LineItem: Line_Item_Type_Video_Default - HIGH",
+    "Attribute_3": "LineItem: Targeting_Expansion_Enable_Optimized - HIGH"
+  },
+  {
+    "Solution": "[Phoebe] Value Based Bidding (VBB) with sensitive data from AI models using Server-side Tag Manager",
+    "Description": "Phoebe leverages Server-side Tag Manager (sGTM) tagging to get predictions directly from a Vertex AI model in real time, and uses the predicted values as secret conversion values to be used in value based bidding.",
+    "URL": "https://github.com/google-marketing-solutions/gps-phoebe",
+    "Owners": "hectorparra,jamessexton,krasowiak,miguelfc,samcb,tsymonds",
+    "Platforms": "Google Ads - Search,GMP - DV360",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Performance_Goal_Auto_Type_Bidding_Cpa - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include - HIGH"
+  },
+  {
+    "Solution": "Consent Bidder - Enhanced Bidding with Consent Signals",
+    "Description": "Currently, consent signals provided by the user are not utilised in the bidding algorithm to enhance our bidding and improve conversions. Consent Bidder allows us to capture consent signals and use them as an additional optimisation layer towards valued users. ",
+    "URL": "",
+    "Owners": "dwilschut,iziancel,nielsoverwijn,solennboulic",
+    "Platforms": "GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include - HIGH",
+    "Attribute_3": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Performance_Goal_Type_Bidding_Cpa - HIGH"
+  },
+  {
+    "Solution": "Project Unifly: Accelerate Media Consolidation on DV360",
+    "Description": "Unifly is a scaled gCare service that improves Media Consolidation by surfacing customized, actionable insights and impact of consolidating media via DV360 at a fortnightly frequency",
+    "URL": "",
+    "Owners": "bpolgariova,harshitsriv,hemantbhatt,krsandeep,quinnnguyen,skychia",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Advertisers - HIGH",
+    "Attribute_3": "LineItem: Integration Details - HIGH"
+  },
+  {
+    "Solution": "LightweightMMM",
+    "Description": "Marketing Mix Modeling (MMM) is used by advertisers to measure advertising effectiveness and inform budget allocation decisions across media channels. Measurement based on aggregated data allows comparison across online and offline channels in addition to being unaffected by recent ecosystem changes (some related to privacy) which may affect attribution modelling. MMM allows you to:\n\n- Estimate the optimal budget allocation across media channels.\n- Understand how media channels perform with a change in spend.\n- Investigate effects on your target KPI (such as sales) by media channel.\n\nTaking a Bayesian approach to MMM allows an advertiser to integrate prior information into modelling, allowing you to:\n\n- Utilise information from industry experience or previous media mix models using Bayesian priors.\n- Report on both parameter and model uncertainty and propagate it to your budget optimisation.\n- Construct hierarchical models, with generally tighter credible intervals, using breakout dimensions such as geography.\n\nThe LightweightMMM an open source package (built using Numpyro and JAX) helps advertisers easily build Bayesian MMM models by providing the functionality to appropriately scale data, evaluate models, optimise budget allocations and plot common graphs used in the field.",
+    "URL": "",
+    "Owners": "abeyuka,dfkelly,dnachbar,pduque",
+    "Platforms": "Google AdManager 360 - DAI (Dynamic Ad insertion),Google Ads - Shopping,Google AdManager 360 - Mobile Apps,AdSense for Search,Google AdManager 360 - Display,YouTube - Premieres,Google Ads - mApps,Measurement & Attribution,YouTube Reserve,YouTube - Director Mix,Google Ads - mSites / mUX,AdMob,Google Ads - Search,SA360,YouTube,Google Ads - Display,GMP - DV360,Google AdManager 360 - Audio,Hotel Ads,Google AdManager 360 - Video,Google AdManager - Mobile Apps,YouTube - Live,Campaign Manager,Google Ads - Video (Auction),Google AdManager - Display,Google AdManager - Video",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Cost_Reporting_Enabled - HIGH",
+    "Attribute_2": "Partner: Data_Access_Config_Sdf_Version - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Dynata - HIGH"
+  },
+  {
+    "Solution": "Offline Measurement Consultation",
+    "Description": "Expand the measurement landscape by figuring out client's offline customer touch points, collect the corresponding data and reflect it on the measurement. This is a complete step by step guide to provide an Offline Measurement consultation\n\n",
+    "URL": "",
+    "Owners": "akhilrallan,fjune,guimarques,irischeng,mwulandari",
+    "Platforms": "Google Cloud - Big Query,Google Ads - Shopping,GMP - Studio,Google Ads - mApps,Ads Data Hub,Google Ads - mSites / mUX,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Video Data Sharing Authorized - HIGH",
+    "Attribute_2": "Advertiser: Data Access Config Sdf Version - HIGH",
+    "Attribute_3": "Advertiser: Data Access Config Sdf Admin Email - HIGH"
+  },
+  {
+    "Solution": "Gaudi ML - Best Practice for Display Creative",
+    "Description": "Actionable best practice insights for display ad copy that drive click uplift at customer level.",
+    "URL": "",
+    "Owners": "amariani",
+    "Platforms": "Google Ads - Display,GMP - DV360",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "LineItem: Creatives - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Display_Default - HIGH"
+  },
+  {
+    "Solution": "Advanced Dynamic Creative Use Cases for DV360 & Studio & Ads Creative Studio",
+    "Description": "A collection of external how-to guides with step by step instructions to execute advanced creative workflows and creative excellence which are filling technical and creative gaps in Google Web Designer and DV360 / Studio / Ads Creative Studio",
+    "URL": "",
+    "Owners": "pvoelcker",
+    "Platforms": "GMP - Studio,GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "Advertiser: Creative Config Ias Client - HIGH",
+    "Attribute_3": "LineItem: Creatives - HIGH"
+  },
+  {
+    "Solution": "Target 101",
+    "Description": "Target 101 aims to deliver a superior video targeting solution enabling advertisers to target trending YouTube videos currently popular amongst their target audience\n",
+    "URL": "",
+    "Owners": "prithvin,swadha",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Agencies & Partners,CPG,Travel,Auto",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Video",
+    "Attribute_2": "LineItem: Line_Item_Type_Youtube_And_Partners_Reach",
+    "Attribute_3": "LineItem: Targeting_Expansion_Enable_Optimized"
+  },
+  {
+    "Solution": "Cracking 1st Party Data Activation",
+    "Description": "A comprehensive guide to define what 1st Party Data is and how to use it. This is aiming to deepen the 1st Party Data knowledge internally, pitch efficiently to clients and unlock their data.  ",
+    "URL": "",
+    "Owners": "fjune,stominaga,taisukek",
+    "Platforms": "Google Ads - Shopping,GMP - Studio,Google Ads - mApps,Google Ads - mSites / mUX,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Dv360 To Data Sharing Enabled - HIGH",
+    "Attribute_3": "Advertiser: Data Access Config Sdf Version - HIGH"
+  },
+  {
+    "Solution": "TITAN: Invisible Impact (e.g. Pmax + Search measurement)",
+    "Description": "Post campaign measurement solution, to demonstrate campaigns' total value on driving and influencing users to complete certain conversion actions on website or in App. The solution identifies the quantitative impact of Google Campaigns by the reattributing the conversion events base on the Play install/Google conversion date and Google Ads serving Log.",
+    "URL": "",
+    "Owners": "chjerry,ektakahashi,ellenmezera,gorock,rtachibana,yiruo",
+    "Platforms": "Google Ads - Shopping,YouTube - Premieres,Google Ads - mApps,Measurement & Attribution,YouTube Reserve,Google Ads - Search,YouTube,GMP - DV360,Google Ads - PMax,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Cost_Reporting_Enabled - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Double_Verify - HIGH"
+  },
+  {
+    "Solution": "Creative Monitoring Tool",
+    "Description": "Creative Monitoring Tool is a monitoring / alert system for new creatives that is added to CM / DV360 for a client.",
+    "URL": "",
+    "Owners": "angelozamudio,pthiyag",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "Advertiser: Creative Config Oba Compliance Disabled - HIGH",
+    "Attribute_3": "LineItem: Creatives - HIGH"
+  },
+  {
+    "Solution": "If This Then Ad (IFTTA) - Event Based Marketing",
+    "Description": "IFTTA enables automatic management of marketing campaigns based on real world events.\n\nIt allows you to query data from virtually any JSON API and control entities in various campaign management tools (e.g. DV360 and Google Ads) in response to the results.",
+    "URL": "",
+    "Owners": "jhoesel,kevinschulz",
+    "Platforms": "Google Ads - Search,GMP - DV360",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,Travel,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Floodlight - HIGH",
+    "Attribute_2": "LineItem: Conversion_Counting_Floodlight_Activity_Configs - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Floodlight Linking Authorized - HIGH"
+  },
+  {
+    "Solution": "DV360: Unify, Bid & Optimize, Measure & Automate Solutions",
+    "Description": "This DGP is focused on DV360 solutions under multiple subtopics of 1. Unification 2. Automation 3. Bidding & Optimization and 4. Measurement",
+    "URL": "",
+    "Owners": "elizabethj,lifantis,lloydsharma,tanil,wito",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,CPG,Auto,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Performance_Goal_Auto_Type_Bidding_Viewable_Cpm - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Double_Verify - HIGH"
+  },
+  {
+    "Solution": "Customer Match Consultation",
+    "Description": "Use 1P data to reach existing customers and find new ones.",
+    "URL": "",
+    "Owners": "artmangabeira,maguirrebengoa",
+    "Platforms": "Google Ads - Shopping,Google Ads - mApps,Google Ads - mSites / mUX,Google Ads - Search,Google Ads - Display,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Advertisers - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Floodlight - HIGH"
+  },
+  {
+    "Solution": "Bidding IQ ",
+    "Description": "Bidding IQ uses a predictive model that identifies the most influential impression quality signals (viewability, creative size, device, etc) impacting lower-funnel KPIs. The model's output is then used to create a Custom Bidding script entirely based on impression signals, with prediction values used as weights. ",
+    "URL": "",
+    "Owners": "brynhastings,cahl,tcomandatore,vschinkel,woutgijsbers",
+    "Platforms": "GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Bid_Strategy_Performance_Goal_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Viewability_Vendor_Integral_Ad_Science - HIGH"
+  },
+  {
+    "Solution": "Attention Based Bidding - Impression Quality in DV360 Solution",
+    "Description": "Attention Based Bidding is a custom bidding strategy for DV360 campaigns that aims to optimize media for cookieless, impression quality signals (does not apply to Youtube).This solution covers the discovery (analyzing and identifying signals that advertisers can use in custom bidding), best practices, examples of weights, and script code examples together with testing frameworks. Advertisers can optimise their video, display or CTV campaigns achieving efficiency by leveraging Google machine learning in DV360.",
+    "URL": "",
+    "Owners": "jarekh",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_2": "LineItem: Line_Item_Type_Display_Default - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Video_Default - HIGH"
+  },
+  {
+    "Solution": "Project Jumbo - YouTube Reach Monitoring Automation + Tool",
+    "Description": "A scalable YT Reach Automation + Monitoring dashboard solution to help drive TV+ initiative and helping customers optimize and grow their incremental reach.",
+    "URL": "",
+    "Owners": "adamsiew,irenexu,pankamols",
+    "Platforms": "GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Agencies & Partners,Tech,CPG,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Reach_Vendor_Comscore - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Video - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Youtube_And_Partners_Reach - HIGH"
+  },
+  {
+    "Solution": "Know Your Audience (KYA)",
+    "Description": "KYA is a solution that leverage Google internal data (including Play, Hivemind, YTData) to generate useful audience targeting strategies or audience insights. Output from KYA can be used to build up Audience Signal of ACi to drive higher ROI. Audience insights included: YouTube channels and channel categories; user affinities, in-market segments; user clusters based on app installations; overlapping between target and benchmark Apps.",
+    "URL": "",
+    "Owners": "chjerry,darrenswchiu,gasliu,hupili,kwanhokelvin,louischu,ritawang,samxing,yiruo",
+    "Platforms": "Google Ads - Shopping,GMP - Studio,Google Ads - mApps,Google Ads - mSites / mUX,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Publishers,Tech,CPG,Finance,Exchange Platforms,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Data Access Config Sdf Version - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Content_Category_Expanded - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Video - HIGH"
+  },
+  {
+    "Solution": "DV360 Duplicator",
+    "Description": "DV360 Duplicator allows duplicate DV360 campaigns easily. It supports Display, Video and YouTube campaigns. Before copying the campaign the user is able to adjust the configuration on Insertion Order, Line Item, YT Ad Group and YT Ad levels.\n\nThis solution is based on the Google Sheets and Apps Script. Also it utilizes the power of the Structured Data Files in DV360.",
+    "URL": "",
+    "Owners": "andriyku",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Campaign: Update_Time_30 - HIGH",
+    "Attribute_2": "LineItem: Update_Time_30 - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Display_Default - HIGH"
+  },
+  {
+    "Solution": "Reachporter",
+    "Description": "Reachporter allows the generation of Unique Reach reports to be shared with advertisers via dashboards. Scope, rhythm, dimensions etc. can be customised in detail, and incrementality computations (who was reached by campaigns A/B/C but not X/Y/Z, in May but not April) are performed automatically. Default dashboards are available for simple configurations.",
+    "URL": "",
+    "Owners": "uenke",
+    "Platforms": "Google Ads - Shopping,GMP - Studio,Google Ads - mApps,Google Ads - mSites / mUX,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "Partner: Data_Access_Config_Sdf_Version - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Reach_Vendor_Unspecified - HIGH"
+  },
+  {
+    "Solution": "Easy Experiments for Everyone (EE4E, aka. Geo Split Tool):  An End-to-End Incrementality Testing & A/B Testing Platform",
+    "Description": "Easy Experiments for Everyone (EE4E) is a web-based platform that can assist users to easily conduct all A/B Testing phases including Plan Building & Verification, Budget Simulation and Result Analysis via CausalImpact and Difference in Differences, without requiring advanced statistical knowledge.",
+    "URL": "",
+    "Owners": "allanrobert,susumuserita,yzzhang,zhuming",
+    "Platforms": "Google Cloud - Big Query,Google Ads - Shopping,Google AdManager 360 - Mobile Apps,AdSense for Search,Google AdManager 360 - Display,YouTube - Premieres,Google Ads - mApps,Measurement & Attribution,YouTube Reserve,YouTube - Director Mix,Ads Data Hub,Google Ads - mSites / mUX,AdMob,Google Ads - Search,SA360,YouTube,Google Ads - Display,GMP - DV360,Google AdManager 360 - Audio,Google AdManager 360 - Video,Google Ads - PMax,Google Ads - DemandGen,YouTube - Live,Campaign Manager,Google Cloud - Other GCP,Merchant Center,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "LineItem: Entity_Status_Active - HIGH",
+    "Attribute_3": "LineItem: Conversion_Counting_Floodlight_Activity_Configs - HIGH"
+  },
+  {
+    "Solution": "Caliper - Causal Impact Automation",
+    "Description": "Causal Impact analysis is a common analysis done across incrementality tests by measurement specialists. It is an important tool to justify and increase our SoW with decreasing focus on attribution due to 3P cookie depreciation.\n\nCaliper is an automation solution to expedite the analysis process. The solution allows you to automatically pull in data from internal data sources like Search Queries and external data sources like App Annie / Data.AI. It also allows you to use custom/user provided data for the analysis. It provides a causal analysis report with lift details and relevant plots.",
+    "URL": "",
+    "Owners": "irenexu,sandythefire",
+    "Platforms": "Google Ads - Shopping,YouTube - Premieres,Google Ads - mApps,Measurement & Attribution,YouTube Reserve,Google Ads - Search,YouTube,Google Ads - Display,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Double_Verify - HIGH",
+    "Attribute_3": "LineItem: Conversion_Counting_Floodlight_Activity_Configs - HIGH"
+  },
+  {
+    "Solution": "Creative & Workflow Automation",
+    "Description": "Increase efficiency and reduce costs by applying workflow automation and creative solutions.\n",
+    "URL": "",
+    "Owners": "allimcdo,ievak,lloydsharma,pvoelcker,santin",
+    "Platforms": "GMP - Studio,SA360,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "Advertiser: Creative Config Oba Compliance Disabled - HIGH",
+    "Attribute_3": "LineItem: Creatives - HIGH"
+  },
+  {
+    "Solution": "Awareness & Brand Consideration Media & Content Solutions",
+    "Description": "This DGP addresses the awareness and brand consideration (TV shift) customer challenge and contains solutions under two major subtopics of 1. media insights, planning & reporting and 2. drive key moments / premium content offerings / TV-like content.",
+    "URL": "",
+    "Owners": "elizabethj,lifantis,lloydsharma,tanil,wito",
+    "Platforms": "Measurement & Attribution,Google Ads - Display,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,CPG,Auto",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Content_Category_Expanded",
+    "Attribute_2": "LineItem: Line_Item_Type_Youtube_And_Partners_Reach",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Nielsen"
+  },
+  {
+    "Solution": "DV360 Custom Bidding Stage 3: Testing & Reporting",
+    "Description": "A comprehensive overview of how to implement a successful test for Custom Bidding. And help your client gain operational efficiencies with use of unified reporting and more \u2026\n\nWelcome to Stage 3, covering testing guidance, along with how to pull and interpret reports.\n\nFor Stage 1, visit [Planning & Discovery](https://partnerdash.google.com/apps/onehub/solutions/2r4moe7a1gabo/preview), a comprehensive guide to delivering your engagement.\n\nFor Stage 2, visit [Testing & Reporting](https://partnerdash.google.com/apps/onehub/solutions/3tqn3o0akeumg/preview), giving you the essentials for implementing Custom Bidding for your client.\n",
+    "URL": "",
+    "Owners": "brynhastings,flohregile,tanil",
+    "Platforms": "GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Agencies & Partners,Tech,CPG,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Bid_Strategy_Performance_Goal_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Advertisers - HIGH"
+  },
+  {
+    "Solution": "WCI - Conversion Import for WhatsApp",
+    "Description": "WCI offers a sample on how to integrate and track conversions that happen in Whatsapp Business-account chats by linking clicked leads (click to chat) to final conversions (purchased through chat app).\n",
+    "URL": "",
+    "Owners": "pedrohlopes",
+    "Platforms": "Google Ads - Search,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Line_Item_Type_Display_Mobile_App_Install - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Lead_Form - HIGH",
+    "Attribute_3": "LineItem: Conversion_Counting_Floodlight_Activity_Configs - HIGH"
+  },
+  {
+    "Solution": "Implementation, Onboarding and Data Architecture ",
+    "Description": "Increase product adoption, product stickiness (lower churn) and enable tech infrastructure consolidation through API consultations and migration solutions for key partners & customers. \n",
+    "URL": "",
+    "Owners": "kskur,skugler,vschinkel,wasiqsaeed,zachtevnan",
+    "Platforms": "Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Cost_Reporting_Enabled - HIGH",
+    "Attribute_2": "Partner: Data_Access_Config_Sdf_Version - HIGH",
+    "Attribute_3": "Partner: Exchange_Config_Enabled_Exchanges_*"
+  },
+  {
+    "Solution": "Zip Code Converter",
+    "Description": "The goal of this solution is to translate zip codes into targetable entities within DV360, Studio, Ad Words.  Zip codes will be translated into: City, State, Provinces, and Proximity friendly lat/long coordinates. \n\nSome advertisers aren't able to use Zip Code targeting due to Housing, Employment, and Credit Policy (go/hec-faq for more information)",
+    "URL": "",
+    "Owners": "terwilleger",
+    "Platforms": "GMP - Studio,Google Ads - mApps,Google Ads - Search,Google Ads - Display,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Oba Compliance Disabled - HIGH",
+    "Attribute_2": "LineItem: Targeting_Expansion_Enable_Optimized - HIGH",
+    "Attribute_3": "Advertiser: General Config Domain Url - HIGH"
+  },
+  {
+    "Solution": "GMP Onboarding Consultation",
+    "Description": "\nThe GMP Onboarding Consultation is focused around developing the foundational account structure for your business to enable optimal tracking, reporting and targeting of your campaigns. The Consultation will walk through a variety of basic and advanced account combinations among Campaign Manager360 , Display & Video 360, and Search 360.\n\nWith 1P data becoming an important factor in today's marketing tactics, there is a small dedicated section that highlights how to properly incorporate Google Analytics 360.\n",
+    "URL": "",
+    "Owners": "darrickly",
+    "Platforms": "SA360,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Floodlight - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Syncable Sites - HIGH"
+  },
+  {
+    "Solution": "3PCD & Privacy Sandbox Consultation",
+    "Description": "As the world moves towards 3rd party cookie deprecation, it is crucial for clients to understand how to prepare for a cookieless world where Google advertising is fueled by the Privacy Sandbox and a variety of other durable solutions. Information is often limited, spread across multiple sources, and subject to rapid change without notification. This solution serves as a repository for all source-of-truth information about the Privacy Sandbox, 3PCD, and their impacts on Google's buyside advertising products.",
+    "URL": "",
+    "Owners": "allimcdo,lisang",
+    "Platforms": "Measurement & Attribution,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Dv360 To Data Sharing Enabled - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Third Party Only Pixel Order Reporting Enabled - HIGH"
+  },
+  {
+    "Solution": "Durable Privacy Tactics",
+    "Description": "Future proof tagging solutions enabling first party data tactics to recover unobservable data",
+    "URL": "",
+    "Owners": "archival,artmangabeira,irischeng,rclaret",
+    "Platforms": "GMP - Studio,SA360,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Data Access Config Sdf Version - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Floodlight - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Floodlight Linking Authorized - HIGH"
+  },
+  {
+    "Solution": "AI-Powered Dubbing (Hermit Crab)",
+    "Description": "Allows LCS customers to dub English video ads with local language voice over to drive higher conversion rates and more efficient CPAs than captioned ads.",
+    "URL": "",
+    "Owners": "gmcrobbie,maximilianw,tommcfarlin",
+    "Platforms": "Google Ads - Shopping,GMP - Studio,YouTube - Premieres,Google Ads - mApps,YouTube Reserve,YouTube - Director Mix,Google Ads - mSites / mUX,Google Ads - Search,SA360,YouTube,Google Ads - Display,GMP - DV360,AdSense for Video,Analytics Suite,Google AdManager 360 - Video,YouTube - Live,Ads Creative Studio - Video,Campaign Manager,Authorized Buyers,Google Ads - Video (Auction),Google AdManager - Video",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Video",
+    "Attribute_2": "LineItem: Line_Item_Type_Youtube_And_Partners_Action",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Effective_Content_Category_Standard"
+  },
+  {
+    "Solution": "Lift Hub Dashboard:  Brand Lift (BL) + Conversion Lift Studies (CLS) ",
+    "Description": "Externally facing dashboard hub for clients to view and action upon CLS and Brand Lift data. \n- View Conversion Lift and Brand Lift Studies in one place\n- Provide an automated way for the Programmatic Media team to share lift data with the advertiser \n- Visibility into all studies run by a client\n\nSign your client up for the Lift Hub Dashboard here:\ngo/lift-dashboard-hub-sign-up",
+    "URL": "",
+    "Owners": "danielghuynh,emmamunley",
+    "Platforms": "YouTube,Google Ads - Display,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Double_Verify",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Conversion_Lift_Vendor_Double_Verify",
+    "Attribute_3": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled"
+  },
+  {
+    "Solution": "Marketing Automation Consult",
+    "Description": "Scope and identify the right automation solutions to target customer CBOs",
+    "URL": "",
+    "Owners": "ievak,jarekh,kgriffel",
+    "Platforms": "Google Cloud - Big Query,Google Ads - Shopping,GMP - Studio,Google Ads - mApps,Google Ads - mSites / mUX,Google Ads - Search,SA360,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Cloud - Other GCP,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "LineItem: Targeting_Expansion_Enable_Optimized - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH"
+  },
+  {
+    "Solution": "Integrated Demand Gen Solutions",
+    "Description": "This DGP empowers advertisers to create and convert demand with Demand Gen by exploring multiple areas: Headroom Planning, Campaign Health Monitoring, Creative Consultation / Automation, and Measurement",
+    "URL": "",
+    "Owners": "elizabethj,lifantis,lloydsharma,tanil,wito",
+    "Platforms": "Google Ads - Shopping,GMP - DV360,Google Ads - DemandGen,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Line_Item_Type_Display_Default - HIGH",
+    "Attribute_2": "LineItem: Line_Item_Type_Youtube_And_Partners_Action - HIGH",
+    "Attribute_3": "LineItem: Conversion_Counting_Floodlight_Activity_Configs - HIGH"
+  },
+  {
+    "Solution": "Full Funnel Creative Solutions",
+    "Description": "This DGP empowers advertisers to optimize their creative campaigns throughout the marketing funnel by exploring five key areas: Creative Asset Variety, Demand Gen Social Features, Creative Effectiveness, Personalization, and Automation",
+    "URL": "",
+    "Owners": "elizabethj,lifantis,lloydsharma,tanil,wito",
+    "Platforms": "GMP - DV360,Google Ads - DemandGen,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Creatives - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Lead_Form - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Type_Bidding_Maximize_Conversions - HIGH"
+  },
+  {
+    "Solution": "Data Driven Attribution Consultation",
+    "Description": "Strategic consultation on GMP Data Driven Attribution capabilities (what is and is not possible), custom attribution and industry best practices. Custom recommendations on setup requirements and campaign architecture needed to ensure consistent measurement and achieve customer's goals.",
+    "URL": "",
+    "Owners": "darrickly",
+    "Platforms": "GMP - Studio,SA360,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Data_Sharing_Enabled - HIGH",
+    "Attribute_2": "LineItem: Conversion_Counting_Floodlight_Activity_Configs - HIGH",
+    "Attribute_3": "LineItem: Conversion_Counting_Post_View_Count_Percentage_Millis - HIGH"
+  },
+  {
+    "Solution": "Activate Travel Insights with TAC",
+    "Description": "A consultation that gets our clients using the Travel Analytics Centre (TAC) tool. Built around business objectives, the consultation helps clients integrate with TAC, and make the most of the insights it produces.",
+    "URL": "",
+    "Owners": "bseoane,flohregile,jbray",
+    "Platforms": "Google Flights and Travel products,Google Ads - Search,SA360,YouTube,GMP - DV360,Hotel Ads,Google Ads - Video (Auction)",
+    "Industries": "Travel",
+    "Attribute_1": "Partner: Exchange_Config_Enabled_Exchanges_Google_Ad_Manager",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Google_Tv",
+    "Attribute_3": "LineItem: Line_Item_Type_Youtube_And_Partners_Reach_Over_The_Top"
+  },
+  {
+    "Solution": "Data Quality Monitor",
+    "Description": "Data Quality Monitor (DQM) provides clients with an easy way to monitor their data. It runs on Google Cloud Platform (GCP) and can act on any data sitting in BigQuery, including exports from various Google Ads & Marketing Platform connectors. The checks/rules are configured with a simple JSON file and managed with scheduled Cloud Workflows. The output are logs that can be visualised and monitored for subsequent action. We also provide templates for common use cases.",
+    "URL": "",
+    "Owners": "psnel",
+    "Platforms": "Google Cloud - Big Query,Google Ads - Shopping,Measurement & Attribution,Google Ads - Search,SA360,YouTube,Google Ads - Display,GMP - DV360,Analytics Suite,Campaign Manager,Google Cloud - Other GCP,Google Ads - Video (Auction)",
+    "Industries": "Apps,Agencies & Partners,Tech,CPG,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Data_Access_Config_Sdf_Admin_Email - HIGH",
+    "Attribute_2": "Partner: Data_Access_Config_Sdf_Version - HIGH",
+    "Attribute_3": "Advertiser: Data Access Config Sdf Admin Email - HIGH"
+  },
+  {
+    "Solution": "Privacy Forward Custom Measurement using Ads Data Hub - Consultation",
+    "Description": "With a shifting privacy landscape in the advertising ecosystem, Ads Data Hub (ADH) is a key tool in providing privacy-safe measurement and targeting functionalities. This service offers education on ADH capabilities and consultation, helping the customer implement ADH to solve for key use cases. Examples are cross-stack custom measurement and audience activation, optionally enriched with 1P data.",
+    "URL": "",
+    "Owners": "tsoennichsen",
+    "Platforms": "YouTube Reserve,Ads Data Hub,YouTube,GMP - DV360,Campaign Manager",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Data Access Config Sdf Version - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Dv360 To Data Sharing Enabled - HIGH",
+    "Attribute_3": "Advertiser: Creative Config Video Data Sharing Authorized - HIGH"
+  },
+  {
+    "Solution": "YT Personas Recommendations (fka DDYA)",
+    "Description": "Improve advertisers targeting for future campaigns and understand their customers and potentially design tailored creative to connect with them, by understanding who are the persuadable Audiences looking at indirectly targeted audience in their historic YouTube campaigns",
+    "URL": "",
+    "Owners": "amariani",
+    "Platforms": "YouTube,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Content_Category_Standard - HIGH",
+    "Attribute_2": "LineItem: Line_Item_Type_Youtube_And_Partners_Reach - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Nielsen - HIGH"
+  },
+  {
+    "Solution": "DiCA  - Display Creative Analysis",
+    "Description": "DiCA is a lightweight automated solution for creative element guidance that combines the best of Datapan and Macaron. By providing guidance on new creatives, you can help clients create better designs. #ML",
+    "URL": "",
+    "Owners": "azamat,pochineni,rajeshprajapat,susumuserita,wjxia,yutaoba",
+    "Platforms": "Google Ads - Display,GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "Advertiser: Creative Config Ias Client - HIGH",
+    "Attribute_3": "LineItem: Creatives - HIGH"
+  },
+  {
+    "Solution": "BQFlow - Quickly Move Data Between Google APIs and BigQuery Without Coding",
+    "Description": "Its like having [API Explorer](https://developers.google.com/apis-explorer) that talks to [BigQuery](https://cloud.google.com/bigquery).  Users of [BQFlow](https://github.com/google-marketing-solutions/bqflow) can quickly move data into tables, write custom SQL, connect dashboards, and even write back to an API using BQFlow.  Because it's [open source](https://github.com/google-marketing-solutions/bqflow), the workflow can then be given to the client using a single JSON file.\n\nBQFlow allows anyone to move data to and from Google APIs and BigQuery without coding.  A [JSON workflow](https://github.com/google-marketing-solutions/bqflow/wiki#example-workflows) file is used to list the [Google APIs](https://developers.google.com/apis-explorer) and [BigQuery endpoints](https://cloud.google.com/bigquery/docs/tables-intro) which can then be executed in a [Colab Notebook](https://github.com/google-marketing-solutions/bqflow/blob/main/colab.ipynb), VM, or Command Line.  BQFlow leverages [Google's built-in Discovery API](https://developers.google.com/discovery) enabling it to support hundreds of Google APIs with only one simple connector, including [Google Ads](https://developers.google.com/google-ads/api/rest/overview).  \n\n[BQFlow JSON workflows ](https://github.com/google-marketing-solutions/bqflow/wiki#example-workflows) use Google's already published [RESTFUL API documents](https://developers.google.com/apis-explorer).  \n",
+    "URL": "https://github.com/google-marketing-solutions/bqflow",
+    "Owners": "anaesqueda,kenjora,seancjones,tbrethauer",
+    "Platforms": "Google Cloud - Big Query,Google AdManager 360 - DAI (Dynamic Ad insertion),Google Ads - Shopping,Google AdManager 360 - Mobile Apps,AdSense for Search,AdSense for Content,GMP - Studio,Google AdManager 360 - Display,AdSense for Shopping,YouTube - Premieres,Google Ads - mApps,Measurement & Attribution,Ads Creative Studio - Audio,YouTube Reserve,YouTube - Director Mix,Ads Data Hub,AdSense for Games,Google Ads - mSites / mUX,AdMob,Google Flights and Travel products,Google Ads - Search,SA360,Ads Creative Studio - Display,YouTube,Google Ads - Display,GMP - DV360,Google AdManager 360 - Audio,AdSense for Video,Analytics Suite,Hotel Ads,Google AdManager 360 - Video,AdSense for Mobile Apps,Open Bidding,Google AdManager - Mobile Apps,YouTube - Live,Ads Creative Studio - Video,Campaign Manager,AdSense for Domains,Google Cloud - Other GCP,Merchant Center,Authorized Buyers,Google Ads - Video (Auction),Google My Business,Google AdManager - Display,Manufacturer Center,Google AdManager - Video",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Ad_Server_Config_Measurement_Dv360_To_Cm_Cost_Reporting_Enabled - HIGH",
+    "Attribute_2": "Partner: Data_Access_Config_Sdf_Admin_Email - HIGH",
+    "Attribute_3": "Partner: Data_Access_Config_Sdf_Version - HIGH"
+  },
+  {
+    "Solution": "GenAI Lab",
+    "Description": "Default project description",
+    "URL": "",
+    "Owners": "astrittmatter,eckoch,michaelweiler,uenke",
+    "Platforms": "Google Cloud - Big Query,Google Ads - Shopping,GMP - Studio,Ads Creative Studio - Audio,Google Ads - Search,SA360,Ads Creative Studio - Display,YouTube,Google Ads - Display,GMP - DV360,Analytics Suite,Ads Creative Studio - Video,Google Cloud - Other GCP,Merchant Center,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Dynata",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Reach_Vendor_Nielsen",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Viewability_Vendor_Integral_Ad_Science"
+  },
+  {
+    "Solution": "Google Tag Consultation",
+    "Description": "Reduce the reliance on 3P cookies and preserve the accuracy of conversions.",
+    "URL": "",
+    "Owners": "archival,artmangabeira,irischeng,jacobcarlson,rclaret",
+    "Platforms": "Measurement & Attribution,Google Ads - Search,SA360,GMP - DV360,Analytics Suite",
+    "Industries": "Media & Entertainment,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Floodlight - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Floodlight Linking Authorized - HIGH",
+    "Attribute_3": "Advertiser: Ad Server Config Third Party Only Pixel Order Reporting Enabled - HIGH"
+  },
+  {
+    "Solution": "Megalista - CRM Data Manager",
+    "Description": "Upload customer CRM data to ALL Google Ads / GMP Endpoints at once to maximize match and  enable cross-sell, upsell, LTV and lead scoring projects across all Google media channels\n\n<h2>This solution has evolved to be a Focus Solution and the version in this page will soon be archived. Please use the new <a href=\"https://partnerdash.google.com/apps/onehub/solutions/54jrej64imbio\">Tightlock</a> Focus Solution instead.</h2>",
+    "URL": "",
+    "Owners": "pedrohlopes",
+    "Platforms": "Google Ads - Search,SA360,GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Ad Server Config Cm Hybrid Account - HIGH",
+    "Attribute_2": "Advertiser: Ad Server Config Cm Hybrid Advertisers - HIGH",
+    "Attribute_3": "Advertiser: Data Access Config Sdf Version - HIGH"
+  },
+  {
+    "Solution": "Custom Taxonomy Classifier",
+    "Description": "This solution uses Vertex AI on Google Cloud to map inputs to a given taxonomy. \n\nAn example use case for this would be to map a list of keywords to a given set of categories in order to restructure an advertiser's account by best practices around theming. \n\nThis solution can also receive images and video as input, returning which category in the taxonomy they match closest to.\n\nThis is using text embeddings, multimodal embeddings, and nearest neighbor search. \n\nIt is set up to be fully self-managed and hosted on customers' own Google Cloud Project, allowing to to be easily scaled and deployed. \n\nDesign doc: https://docs.google.com/document/d/1ODsRLToR43uWsSAF8p70spataheB5eW3HlTgFnU-h4s/edit?resourcekey=0-SwM9raQZxx1kN-ZJ1-CXqA&tab=t.0\n\nExternal blog post about the solution: https://medium.com/google-cloud/building-a-custom-classification-api-on-google-cloud-a-technical-deep-dive-edd606d486b8",
+    "URL": "https://github.com/google-marketing-solutions/custom-taxonomy-classifier",
+    "Owners": "csanderson,maximilianw",
+    "Platforms": "Google Cloud - Big Query,Google Ads - Shopping,AdSense for Search,AdSense for Content,GMP - Studio,AdSense for Shopping,Google Ads - mApps,AdSense for Games,Google Ads - Search,SA360,YouTube,Google Ads - Display,GMP - DV360,AdSense for Video,Hotel Ads,AdSense for Mobile Apps,Campaign Manager,AdSense for Domains,Google Cloud - Other GCP,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Content_Category_Expanded - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Content_Category_Limited - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Content_Category_Standard - HIGH"
+  },
+  {
+    "Solution": "Video Measurement Solutions",
+    "Description": "This DGP empowers advertisers to measure media effectiveness by exploring three areas: Incrementality, Cross Media Reach and Reach Reporting.",
+    "URL": "",
+    "Owners": "elizabethj,lifantis,lloydsharma,tanil,wito",
+    "Platforms": "Google Ads - Display,GMP - DV360,Google Ads - Video (Auction)",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Viewability_Vendor_Integral_Ad_Science - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Reach_Vendor_Nielsen - HIGH",
+    "Attribute_3": "Advertiser: Creative Config Video Data Sharing Authorized - HIGH"
+  },
+  {
+    "Solution": "Recommendations AI Based Display Creative",
+    "Description": "One tactic to add sophistication to re-marketing display ads is by incorporating Recommendations AI, Google\u2019s product recommender into the creative optimization strategy. Recommendations AI draws on Google\u2019s experience and expertise in machine learning to deliver tailored SKU (or any other variable) level recommendations based on the \u201cfrequently bought together\u201d or the many other available models. Items frequently bought together with the SKU of interest will be built into creatives, and trafficked to audiences of users who have a demonstrated interest in those SKUs, yielding unique upsell, and other unique full funnel benefits. \n\nThe deliverable of this solution is a dynamic creative carousel, where the items/SKUs shown are decided by Recommendations AI. The carousel is a rich media creative which can be trafficked through CM/DV. ",
+    "URL": "",
+    "Owners": "charlieliu,lamarra,sangnguyen",
+    "Platforms": "Google Cloud - Big Query,GMP - Studio,Google Ads - Display,GMP - DV360,Campaign Manager,Google Cloud - Other GCP",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_2": "LineItem: Creatives - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Display_Default - HIGH"
+  },
+  {
+    "Solution": "Triggerator",
+    "Description": "Triggerator is a scalable open-source solution aimed at automating campaign management in Google Display&Video 360 (DV360) using data from external sources and declarative rules. The project is [published on Github](https://github.com/google/triggerator) and is free to use by anyone. More info at [go/triggerator](https://goto.google.com/triggerator).",
+    "URL": "",
+    "Owners": "segy",
+    "Platforms": "GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Exchange Platforms,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Update_Time_180 - HIGH",
+    "Attribute_2": "Campaign: Update_Time_180 - HIGH",
+    "Attribute_3": "Advertiser: Update Time 180 - HIGH"
+  },
+  {
+    "Solution": "YouTube mROI Consultation Tool",
+    "Description": "An internal-only dashboard that provides the most up-to-date data and insights on the six levers that drive YouTube ROI and effectiveness. This solution enables consultations at all country or brand/sub-brand levels.",
+    "URL": "",
+    "Owners": "bseoane,flohregile,lloydsharma,tanil",
+    "Platforms": "Measurement & Attribution,YouTube Reserve,YouTube,GMP - DV360,Google AdManager 360 - Video,Campaign Manager,Google Ads - Video (Auction),Google AdManager - Video",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Video",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Type_Bidding_Target_Roas",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Third_Party_Measurement_Configs_Brand_Lift_Vendor_Unspecified"
+  },
+  {
+    "Solution": "Acquire New Customers: The Power of Predictive Audience",
+    "Description": "Experiment to test if using Predictive Audiences can acquire new customers at a lower cost and higher return on ad spend (ROAS) compared to existing remarketing campaigns",
+    "URL": "",
+    "Owners": "smitham",
+    "Platforms": "GMP - DV360",
+    "Industries": "Retail",
+    "Attribute_1": "LineItem: Targeting_Expansion_Enable_Optimized - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Performance_Goal_Auto_Type_Bidding_Cpa - HIGH",
+    "Attribute_3": "LineItem: Line_Item_Type_Youtube_And_Partners_Action - HIGH"
+  },
+  {
+    "Solution": "DV360 Custom Bidding Consulting Guide Stage 1: Planning & Discovery",
+    "Description": "An actionable guide with everything you need to build a tailored Custom Bidding engagement for your client. From planning, through implementation, to activation, it will help you build a bridge between a client\u2019s actual marketing objectives and their in-platform goals and performance.\n\nWelcome to Stage 1, a comprehensive guide to delivering a tailored Custom Bidding engagement.\n\nStage 2, [Implementation](https://partnerdash.google.com/apps/onehub/solutions/4a0tug5tcqvdo/preview), gives you the essentials for implementing Custom Bidding for your client.\n\nStage 3, \n[Testing & Reporting](https://partnerdash.google.com/apps/onehub/solutions/3tqn3o0akeumg/preview), provides testing guidance, along with how to pull and interpret reports.\n",
+    "URL": "",
+    "Owners": "brynhastings,flohregile,tanil",
+    "Platforms": "GMP - DV360,Analytics Suite,Campaign Manager",
+    "Industries": "Media & Entertainment,Apps,Agencies & Partners,Tech,CPG,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Bid_Strategy_Performance_Goal_Auto_Custom_Bidding_Algorithm - HIGH",
+    "Attribute_2": "LineItem: Bid_Strategy_Maximize_Spend_Auto_Custom_Bidding_Algorithm - LOW",
+    "Attribute_3": "Advertiser: Update Time 30 - HIGH"
+  },
+  {
+    "Solution": "Topic Mine",
+    "Description": "Topic Mine leverages 1st and/or 2nd party data to identify trending topics and uses Google Gemini to create relevant ads' texts. It generates headlines, descriptions and keywords given a list of products, brands or services and (optionally) additional info about them.\n\nThe solution has two options for operating:\n\n - Internal trends: if the client identifies trending topics on their own (e.g.: trending products being purchased on their site, top search terms this week, etc.), Topic Mine takes these trending topics and generate ads' content for them. Clients usually identify trends with Google Analytics (GA4) data on their site. In this case, the input is literally a list of terms and [optionally] their descriptions or extra info about them.\n\n - External trends: if the client has a fixed list of products, brands or services they want to advertise (might be, for example, a category of products in particular), Topic Mine will take that list and try to find a relationship between each item and trending topics obtained from an external source. If there is a relationship between what the client offers and some trending topic, it will create ads' content for that.\n\nThe output of this project is a spreadsheet with the generated headlines, descriptions and keywords ready to be imported to SA360, DV360 or ACS.",
+    "URL": "https://github.com/google-marketing-solutions/topic-mine",
+    "Owners": "anaesqueda,atomas,jgriggio",
+    "Platforms": "Google Ads - Search,GMP - DV360",
+    "Industries": "Media & Entertainment,Agencies & Partners,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "Partner: Data_Access_Config_Sdf_Version - HIGH",
+    "Attribute_2": "Advertiser: Creative Config Dynamic Enabled - HIGH",
+    "Attribute_3": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Google_Tv - HIGH"
+  },
+  {
+    "Solution": "YouTube Bulk Uploader",
+    "Description": "YouTube Bulk Uploader makes it easy to manage uploads by consolidating everything in one place. It saves time by uploading all files in one go. It is also a flexible and customizable open source solution.\n",
+    "URL": "",
+    "Owners": "pekalp",
+    "Platforms": "Google Ads - mApps,GMP - DV360",
+    "Industries": "Media & Entertainment,Apps,Government & Advocacy,Agencies & Partners,Tech,CPG,Finance,Travel,Auto,Pharma & Healthcare,Retail",
+    "Attribute_1": "LineItem: Line_Item_Type_Youtube_And_Partners_Simple - HIGH",
+    "Attribute_2": "LineItem: Youtube_And_Partners_Settings_Inventory_Source_Include_Video - HIGH",
+    "Attribute_3": "LineItem: Creatives - HIGH"
+  }
+]
